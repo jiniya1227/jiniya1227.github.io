@@ -24,15 +24,21 @@
     --accent-ink: #ffffff;
     --on-accent-soft: rgba(255, 255, 255, .72);
     --on-accent-line: rgba(255, 255, 255, .22);
+    --i-bg: #f0edf4; --i-line: #dbd3e4; --i-note: #e5ddee; --i-beige: #e7e4dc;
+    --i-leaf: #9da58e; --i-leaf2: #c4c7b0; --i-sun: #cdc2db; --i-house: #fcfbf5;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #1b1a1e; --cream: #232127; --ink: #f0edf3; --ink-soft: #b5afbb; --ink-faint: #868090;
       --line: #35323b; --accent: #b9a3d6; --accent-deep: #3a3046; --accent-ink: #1b1a1e;
       --on-accent-soft: rgba(255, 255, 255, .7); --on-accent-line: rgba(255, 255, 255, .16);
+      --i-bg: #2a2730; --i-line: #3e3947; --i-note: #3a3346; --i-beige: #34322d;
+      --i-leaf: #7b8270; --i-leaf2: #5f6454; --i-sun: #6b5f7e; --i-house: #4a4741;
     }
   }
   :root[data-theme="dark"] {
+    --i-bg: #2a2730; --i-line: #3e3947; --i-note: #3a3346; --i-beige: #34322d;
+    --i-leaf: #7b8270; --i-leaf2: #5f6454; --i-sun: #6b5f7e; --i-house: #4a4741;
     --bg: #1b1a1e; --cream: #232127; --ink: #f0edf3; --ink-soft: #b5afbb; --ink-faint: #868090;
     --line: #35323b; --accent: #b9a3d6; --accent-deep: #3a3046; --accent-ink: #1b1a1e;
     --on-accent-soft: rgba(255, 255, 255, .7); --on-accent-line: rgba(255, 255, 255, .16);
@@ -78,7 +84,7 @@
 
   /* 첫 화면 */
   .hero { padding: 84px 0 76px; }
-  .hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: end; }
+  .hero .wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
   .hero h1 { font-size: clamp(34px, 5.6vw, 54px); font-weight: 700; letter-spacing: -2px; margin-bottom: 28px; }
   .hero h1 em { font-style: normal; color: var(--accent); }
   .hero .strong { font-size: 18px; font-weight: 600; margin-bottom: 14px; }
@@ -90,7 +96,10 @@
   }
   .btn span { font-size: 17px; }
 
-  .profile { background: var(--cream); border-radius: 10px; padding: 30px 28px; }
+  .profile { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 30px 28px; }
+  .story-top { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-bottom: 44px; }
+  .story-top .head { margin-bottom: 0; }
+  @media (max-width: 860px) { .story-top { grid-template-columns: 1fr; gap: 28px; } }
   .profile .who { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
   .profile .who strong { font-size: 26px; font-weight: 700; letter-spacing: -1px; }
   .profile .who small { font-size: 14px; color: var(--ink-soft); }
@@ -100,6 +109,45 @@
   .rows li b { font-weight: 700; }
   .rows li span { color: var(--ink-soft); }
   @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 56px 0 60px; } }
+
+  /* 첫 화면 일러스트 — 크기는 그림 너비(cqw)에 맞춰 함께 줄어듭니다 */
+  .illus { margin: 0; container-type: inline-size; }
+  .stage { position: relative; width: 100%; aspect-ratio: 1 / 1.08; line-height: 1.5; }
+  .stage > * { position: absolute; }
+  .arch { inset: 6% 7% 4% 7%; background: var(--i-bg); border-radius: 46cqw 46cqw 3cqw 3cqw; }
+  .ring { left: 12%; top: 9%; width: 76%; aspect-ratio: 1; border: 1px solid var(--i-line); border-radius: 50%; }
+  .i-tag { top: 13%; left: 0; right: 0; text-align: center; font-size: 3.1cqw; letter-spacing: .25cqw; color: var(--ink-soft); }
+  .i-spark { right: 4%; top: 12%; width: 10cqw; fill: var(--accent); opacity: .8; }
+  .post {
+    left: 15%; top: 22%; width: 60%; padding: 3.4cqw; transform: rotate(-4deg);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 2cqw;
+    box-shadow: 0 2cqw 5cqw rgba(70, 50, 100, .10);
+  }
+  .p-head { display: flex; align-items: center; gap: 1.8cqw; font-size: 2.4cqw; color: var(--ink-soft); margin-bottom: 2.6cqw; }
+  .p-avatar { width: 6.4cqw; height: 6.4cqw; border-radius: 50%; background: var(--i-bg); display: grid; place-items: center; flex: 0 0 auto; }
+  .p-avatar svg { width: 3.4cqw; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+  .p-dots { margin-left: auto; letter-spacing: -.2cqw; }
+  .p-pic { display: block; width: 100%; height: auto; margin-bottom: 3cqw; }
+  .p-title { font-size: 4.2cqw; font-weight: 700; letter-spacing: -.25cqw; line-height: 1.35; margin-bottom: 2.4cqw; }
+  .p-line { display: block; height: 1.2cqw; border-radius: 1cqw; background: var(--i-bg); margin-bottom: 1.4cqw; }
+  .p-line.short { width: 62%; }
+  .p-chips { display: flex; gap: 1.4cqw; margin-top: 2.4cqw; }
+  .p-chips span { font-size: 2.1cqw; color: var(--ink-soft); background: var(--i-bg); padding: .8cqw 1.8cqw; border-radius: .8cqw; white-space: nowrap; }
+  .place {
+    right: 2%; top: 71%; width: 50%; display: flex; align-items: center; gap: 2.6cqw; padding: 2.6cqw 3cqw;
+    transform: rotate(3deg); background: var(--bg); border: 1px solid var(--line); border-radius: 2cqw;
+    box-shadow: 0 2cqw 5cqw rgba(70, 50, 100, .12);
+  }
+  .pl-icon { width: 9cqw; height: 9cqw; border-radius: 50%; background: var(--i-bg); display: grid; place-items: center; flex: 0 0 auto; }
+  .pl-icon svg { width: 4.4cqw; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+  .pl-text b { display: block; font-size: 3.2cqw; letter-spacing: -.15cqw; line-height: 1.3; }
+  .pl-text small { display: block; font-size: 2.4cqw; color: var(--ink-soft); line-height: 1.4; }
+  .pl-check { margin-left: auto; font-size: 3.6cqw; color: var(--i-leaf); }
+  .note {
+    left: 1%; bottom: 3%; padding: 2.8cqw 3.6cqw; background: var(--i-note); border-radius: 1.4cqw;
+    font-size: 2.7cqw; line-height: 1.6; color: var(--ink);
+  }
+  .illus figcaption { text-align: right; font-size: 12px; letter-spacing: 3px; color: var(--ink-faint); margin-top: 10px; padding-right: 6%; }
 
   /* 섹션 공통 */
   section { padding: 96px 0; scroll-margin-top: 68px; }
@@ -205,25 +253,64 @@
       <a class="btn" href="#services">할 수 있는 일 보기 <span>↓</span></a>
     </div>
 
-    <aside class="profile">
-      <div class="who"><strong>마케팅지니</strong></div>
-      <p class="tagline">돌봄 경험 × 온라인 마케팅 × AI</p>
-      <ul class="rows">
-        <li><b>가족 돌봄</b><span>치매 어머니를 함께 사는 집에서 돌보는 보호자</span></li>
-        <li><b>현장 경력</b><span>주야간보호센터 요양보호사 약 1년</span></li>
-        <li><b>온라인 운영</b><span>주야간보호센터 블로그·네이버 플레이스 직접 운영</span></li>
-        <li><b>AI 활용</b><span>AI 도구를 꾸준히 공부하고 실무에 활용</span></li>
-      </ul>
-    </aside>
+    <!-- 첫 화면 일러스트: 그림 파일 없이 코드로 그려서 index.html 하나만 올리면 됩니다 -->
+    <figure class="illus" aria-label="마케팅지니가 만드는 블로그 글과 지역 정보를 표현한 그림">
+      <div class="stage">
+        <div class="arch"></div>
+        <div class="ring"></div>
+        <p class="i-tag">좋은 이야기가, 필요한 곳에.</p>
+        <svg class="i-spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1 9.5 4.5 13.5 18 18-13.5 4.5-17 8.5-18 18-1-9.5-4.5-13.5-18-18C15.5 15.5 19 11.5 20 2Z"/></svg>
+
+        <div class="post">
+          <div class="p-head">
+            <span class="p-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.5 4.6 2 6.3 7.5 9-5.5 2.7-7 4.4-7.5 9-.5-4.6-2-6.3-7.5-9C10 9.3 11.5 7.6 12 3Z"/></svg></span>
+            <span>마케팅지니의 작업 노트</span>
+            <span class="p-dots">•••</span>
+          </div>
+          <svg class="p-pic" viewBox="0 0 300 130" aria-hidden="true">
+            <rect width="300" height="130" rx="8" style="fill:var(--i-beige)"/>
+            <circle cx="252" cy="30" r="17" style="fill:var(--i-sun)"/>
+            <path d="M44 130c-14-26-12-62 12-84 16 26 16 60 2 84Z" style="fill:var(--i-leaf)"/>
+            <path d="M232 130c6-30 26-50 50-54-4 28-22 48-46 54Z" style="fill:var(--i-leaf2)"/>
+            <path d="M112 130V78a38 38 0 0 1 76 0v52Z" style="fill:var(--i-house)"/>
+            <path d="M134 82l16-13 16 13v24h-32Z" style="fill:none;stroke:var(--accent);stroke-width:4;stroke-linejoin:round"/>
+          </svg>
+          <p class="p-title">보호자가 궁금한 것을<br>차근차근 담은 이야기</p>
+          <span class="p-line"></span><span class="p-line short"></span>
+          <div class="p-chips"><span>현장을 아는 콘텐츠</span><span>꾸준한 관리</span></div>
+        </div>
+
+        <div class="place">
+          <span class="pl-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+          <span class="pl-text"><b>우리 동네, 우리 가게</b><small>필요한 정보를 한눈에</small></span>
+          <span class="pl-check">✓</span>
+        </div>
+
+        <p class="note">사장님은 운영에 집중하세요.<br><b>온라인은 함께 정리할게요.</b></p>
+      </div>
+      <figcaption>WEB PAGE · BLOG · PLACE</figcaption>
+    </figure>
   </div>
 </section>
 
 <section class="cream" id="story">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">저는 이런 사람이에요</span>
-      <h2>사람을 먼저 이해하고,<br>고객의 궁금증부터 답합니다.</h2>
-      <p>제 이력은 한 줄로 정리되지 않습니다. 그래서 오히려 고객의 입장을 여러 방향에서 볼 수 있습니다.</p>
+    <div class="story-top">
+      <div class="head">
+        <span class="eyebrow">저는 이런 사람이에요</span>
+        <h2>사람을 먼저 이해하고,<br>고객의 궁금증부터 답합니다.</h2>
+        <p>제 이력은 한 줄로 정리되지 않습니다. 그래서 오히려 고객의 입장을 여러 방향에서 볼 수 있습니다.</p>
+      </div>
+      <aside class="profile">
+        <div class="who"><strong>마케팅지니</strong></div>
+        <p class="tagline">돌봄 경험 × 온라인 마케팅 × AI</p>
+        <ul class="rows">
+          <li><b>가족 돌봄</b><span>치매 어머니를 함께 사는 집에서 돌보는 보호자</span></li>
+          <li><b>현장 경력</b><span>주야간보호센터 요양보호사 약 1년</span></li>
+          <li><b>온라인 운영</b><span>주야간보호센터 블로그·네이버 플레이스 직접 운영</span></li>
+          <li><b>AI 활용</b><span>AI 도구를 꾸준히 공부하고 실무에 활용</span></li>
+        </ul>
+      </aside>
     </div>
     <div class="grid-2">
       <div class="card">
