@@ -203,6 +203,47 @@
   .ai-q li::before { content: "Q. "; font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 19px; color: var(--violet); }
   @media (max-width: 860px) { .ai-box { grid-template-columns: 1fr; } }
 
+  /* 숫자 카드 — 확인된 사실만 */
+  .facts-sec { padding: 40px 0 72px; }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .facts li { list-style: none; padding: 28px 22px; text-align: center; }
+  .facts li + li { border-left: 1px solid var(--line); }
+  .facts .num { display: block; font-family: "Noto Serif KR", serif; font-weight: 700; font-size: clamp(34px, 4.6vw, 48px); line-height: 1.15; color: var(--violet); letter-spacing: -.03em; }
+  .facts .num small { font-size: .5em; margin-left: 2px; color: var(--ink); }
+  .facts b { display: block; font-size: 16px; margin-top: 8px; }
+  .facts span:last-child { display: block; font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
+  ul.facts { padding: 0; margin: 0; }
+  @media (max-width: 760px) {
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .facts li { padding: 22px 12px; }
+    .facts li:nth-child(3) { border-left: 0; }
+    .facts li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  }
+
+  /* AI 대화 예시 화면 */
+  .chat { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+  .chat-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 18px 20px 0; }
+  .chat > input { position: absolute; opacity: 0; pointer-events: none; }
+  .chat-tabs label { cursor: pointer; font-size: 14.5px; font-weight: 700; padding: 8px 16px; border-radius: 999px; background: var(--lav); color: var(--ink-soft); }
+  #ct1:focus-visible ~ .chat-tabs [for="ct1"], #ct2:focus-visible ~ .chat-tabs [for="ct2"], #ct3:focus-visible ~ .chat-tabs [for="ct3"] { outline: 2px solid var(--violet); outline-offset: 2px; }
+  #ct1:checked ~ .chat-tabs [for="ct1"], #ct2:checked ~ .chat-tabs [for="ct2"], #ct3:checked ~ .chat-tabs [for="ct3"] { background: var(--grad); color: #fff; }
+  .chat-bar { display: flex; align-items: center; gap: 8px; margin: 16px 20px 0; padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); font-weight: 500; }
+  .chat-bar i { width: 9px; height: 9px; border-radius: 50%; background: #3fa37a; display: block; }
+  .chat-bar em { margin-left: auto; font-style: normal; font-size: 12px; color: var(--ink-faint); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; }
+  .chat-panel { display: none; padding: 18px 20px 22px; }
+  #ct1:checked ~ .cp1, #ct2:checked ~ .cp2, #ct3:checked ~ .cp3 { display: block; }
+  .ask { margin-left: auto; width: fit-content; max-width: 88%; background: var(--grad); color: #fff; font-weight: 700; font-size: 15.5px; padding: 12px 18px; border-radius: 18px 18px 4px 18px; }
+  .ans { list-style: none; padding: 0; margin: 16px 0 0; counter-reset: a; }
+  .ans li { counter-increment: a; position: relative; padding: 7px 0 7px 26px; font-size: 15.5px; }
+  .ans li::before { content: counter(a) "."; color: var(--ink-faint); position: absolute; left: 0; }
+  .ans li b { font-weight: 700; }
+  .ans li span { color: var(--ink-soft); }
+  .miss { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-weight: 700; color: var(--warn); font-size: 15.5px; }
+  .chat-note { padding: 12px 20px 16px; background: var(--soft); font-size: 13px; color: var(--ink-faint); line-height: 1.6; }
+  :root { --warn: #c2553f; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --warn: #ff9b85; } }
+  :root[data-theme="dark"] { --warn: #ff9b85; }
+
   /* 할 수 있는 일 */
   .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .svc-grid .no { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 34px; color: var(--violet); line-height: 1; margin-bottom: 14px; display: block; }
@@ -375,6 +416,18 @@
   </div>
 </section>
 
+<!-- 숫자 카드: 확인된 사실만 씁니다. 바뀌면 여기와 아래 소개 칸을 같이 고칩니다. -->
+<section class="facts-sec" aria-label="마케팅지니 한눈에 보기">
+  <div class="wrap">
+    <ul class="facts">
+      <li><span class="num">약 1<small>년</small></span><b>요양보호사 경력</b><span>주야간보호센터 현장</span></li>
+      <li><span class="num">1<small>년+</small></span><b>블로그·플레이스 운영</b><span>센터 채널을 처음부터</span></li>
+      <li><span class="num">3<small>개 시</small></span><b>직접 찾아가는 지역</b><span>수원·화성·용인</span></li>
+      <li><span class="num">4<small>가지</small></span><b>함께 정리하는 채널</b><span>블로그·플레이스·당근·홈페이지</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="soft" id="story">
   <div class="wrap">
     <div class="story-top">
@@ -463,12 +516,47 @@
         <a class="btn" style="margin-top:18px" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 무료 진단 신청 <span>↗</span></a>
       </div>
       <div>
-        <p class="label">이런 질문으로 확인합니다</p>
-        <ul class="ai-q">
-          <li>수원 권선구 주간보호센터 추천해 줘</li>
-          <li>부모님이 다닐 만한 주간보호센터, 우리 동네에 어디 있어?</li>
-          <li>장기요양 4등급 주간보호 비용은 얼마야?</li>
-        </ul>
+        <p class="label" style="margin-bottom:12px">보호자가 AI에게 이렇게 묻습니다</p>
+        <!-- 예시 화면: 실제 AI 답변이 아닙니다. A·B·C는 가상의 센터입니다. -->
+        <div class="chat">
+          <input type="radio" name="ct" id="ct1" checked>
+          <input type="radio" name="ct" id="ct2">
+          <input type="radio" name="ct" id="ct3">
+          <div class="chat-tabs" role="group" aria-label="센터 종류 고르기">
+            <label for="ct1">주야간보호</label>
+            <label for="ct2">방문요양</label>
+            <label for="ct3">요양원</label>
+          </div>
+          <div class="chat-bar"><i></i>AI 검색<em>예시 화면</em></div>
+          <div class="chat-panel cp1">
+            <p class="ask">수원 권선구 주간보호센터 추천해 줘</p>
+            <ol class="ans">
+              <li><b>A 주간보호센터</b> <span>· 송영 지역과 하루 일과 안내</span></li>
+              <li><b>B 주야간보호센터</b> <span>· 등급별 이용 비용 공개</span></li>
+              <li><b>C 데이케어센터</b> <span>· 프로그램 사진과 오시는 길</span></li>
+            </ol>
+            <p class="miss">우리 센터 이름은 이 답에 없습니다</p>
+          </div>
+          <div class="chat-panel cp2">
+            <p class="ask">화성 병점 근처 방문요양센터 알려 줘</p>
+            <ol class="ans">
+              <li><b>A 방문요양센터</b> <span>· 방문 가능 지역 안내</span></li>
+              <li><b>B 재가복지센터</b> <span>· 요양보호사 연결 절차 설명</span></li>
+              <li><b>C 방문요양센터</b> <span>· 상담 전화와 운영 시간</span></li>
+            </ol>
+            <p class="miss">우리 센터 이름은 이 답에 없습니다</p>
+          </div>
+          <div class="chat-panel cp3">
+            <p class="ask">용인 기흥구에 어머니 모실 요양원 추천해 줘</p>
+            <ol class="ans">
+              <li><b>A 요양원</b> <span>· 입소 절차와 비용 안내</span></li>
+              <li><b>B 요양원</b> <span>· 면회 방법과 식단 공개</span></li>
+              <li><b>C 노인요양시설</b> <span>· 시설 사진과 오시는 길</span></li>
+            </ol>
+            <p class="miss">우리 센터 이름은 이 답에 없습니다</p>
+          </div>
+          <p class="chat-note">이해를 돕기 위한 예시 화면이며, 실제 AI 답변이 아닙니다. A·B·C는 가상의 센터입니다. 무료 진단에서는 우리 센터로 실제로 물어본 화면을 캡처해 드립니다.</p>
+        </div>
       </div>
     </div>
   </div>
