@@ -6,13 +6,13 @@
 <title>센터 홍보 상품 안내 | 마케팅지니</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
-<meta name="description" content="주야간보호센터를 위한 블로그·네이버 플레이스·당근·안내 웹페이지. 상품 구성과 가격을 한 장에 정리했습니다.">
+<meta name="description" content="주야간보호센터를 위한 블로그·네이버 플레이스·당근·홈페이지. 상품 구성과 가격을 한 장에 정리했습니다.">
 <!-- 카카오톡·문자로 링크를 보낼 때 보이는 미리보기 -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://marketingjini.com/service/">
 <meta property="og:image" content="https://marketingjini.com/service/og.png?v=20261104f">
 <meta property="og:title" content="센터 홍보 상품 안내 | 마케팅지니">
-<meta property="og:description" content="센터는 사진만 보내 주세요. 무료 진단(AI 추천 확인 포함) · 블로그·플레이스 정비 · 안내 웹페이지 · 블로그+플레이스+당근 월간 관리">
+<meta property="og:description" content="센터는 사진만 보내 주세요. 무료 진단(AI 추천 확인 포함) · 블로그·플레이스 정비 · 홈페이지 · 블로그+플레이스+당근 월간 관리">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
@@ -143,21 +143,122 @@
   .call { display: inline-block; background: #fff; color: #4b3bb5 !important; border-radius: 999px; padding: 8px 20px; font-family: "Noto Serif KR", serif; }
   .foot .biz { grid-column: 1 / -1; font-size: 12.5px; padding-top: 8px; border-top: 1px solid var(--on-deep-line); }
 
-  .tools { max-width: 880px; margin: -16px auto 32px; padding: 0 4px; text-align: right; }
+  .tools { max-width: 880px; margin: -16px auto 32px; padding: 0 4px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .tools a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: 15px; }
   .tools button { font: inherit; font-size: 14px; color: var(--accent); background: none; border: 1px solid var(--accent); border-radius: 999px; padding: 6px 16px; cursor: pointer; }
 
+  /* 위쪽 메뉴 (화면에서만, 인쇄할 때는 숨김) */
+  .topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .tb-in { max-width: 1040px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .tb-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .tb-logo img { width: 38px; height: 38px; border-radius: 11px; }
+  .tb-logo .en { font-size: 23px; line-height: 1; }
+  .tb-logo b { font-family: "Noto Serif KR", serif; font-size: 16px; color: var(--accent); }
+  .topbar nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
+  .topbar nav a { text-decoration: none; color: var(--ink-soft); font-weight: 500; }
+  .topbar nav a:hover { color: var(--accent); }
+  .topbar nav .tb-cta { color: #fff; background: linear-gradient(135deg, #7b5cf0, #5566e8); border-radius: 10px; padding: 8px 16px; font-weight: 700; }
+  .topbar nav .tb-cta:hover { color: #fff; }
+
+  /* 컴퓨터 화면: 글자를 키우고 여백을 넉넉하게 */
+  @media screen and (min-width: 681px) {
+    body { font-size: 17px; line-height: 1.8; }
+    .sheet { max-width: 1040px; margin: 40px auto 48px; border-radius: 20px; }
+    .pad { padding: 0 64px; }
+    .head { padding: 56px 64px 52px; }
+    .brand { margin-bottom: 30px; }
+    .brand img { width: 36px; height: 36px; border-radius: 10px; }
+    .brand b { font-size: 21px; }
+    .brand .en { font-size: 18px; }
+    .head h1 { font-size: 40px; margin-bottom: 18px; }
+    .head p { font-size: 18px; max-width: 760px; }
+    .sec { padding-top: 64px; }
+    .sec-title { gap: 14px; margin-bottom: 24px; }
+    .sec-title .en { font-size: 28px; }
+    .sec-title h2 { font-size: 27px; }
+    .worries { gap: 14px; }
+    .worries li { padding: 20px 24px; font-size: 16.5px; border-radius: 14px; }
+    .item { grid-template-columns: 64px 1fr auto; gap: 8px 28px; padding: 30px 0; }
+    .item .no { font-size: 30px; }
+    .item h3 { font-size: 22px; }
+    .item h3 small { font-size: 14px; }
+    .item p { font-size: 16.5px; }
+    .item .price { font-size: 27px; }
+    .item .price small { font-size: 13.5px; margin-top: 4px; }
+    .item.best { padding: 30px 24px; margin: 12px -24px; border-radius: 16px; }
+    .badge { font-size: 12.5px; padding: 2px 11px; }
+    .m-head { margin-top: 44px; gap: 6px 14px; }
+    .m-head h3 { font-size: 22px; }
+    .m-head span { font-size: 15.5px; }
+    .monthly { gap: 16px; margin-top: 18px; }
+    .monthly div { padding: 24px 26px; border-radius: 14px; }
+    .monthly b { font-size: 19px; }
+    .monthly .m-price { font-size: 22px; }
+    .monthly p { font-size: 16px; margin-top: 6px; }
+    .monthly .vat { font-size: 14px; margin-top: 2px; }
+    .fine { font-size: 14px; margin-top: 18px; }
+    .two { gap: 56px; }
+    .flow li { grid-template-columns: 40px 1fr; padding: 15px 0; font-size: 16.5px; }
+    .flow li::before { font-size: 23px; }
+    .promise li { padding: 15px 0 15px 30px; font-size: 16.5px; }
+    .faq { gap: 28px 56px; }
+    .faq dt { font-size: 17.5px; }
+    .faq dd { font-size: 16px; margin-top: 6px; }
+    .who { margin-top: 72px; padding: 44px 64px; gap: 32px; }
+    .who .en { font-size: 19px; }
+    .who h3 { font-size: 23px; }
+    .who ul { font-size: 16px; gap: 8px 32px; }
+    .foot { padding: 40px 64px; gap: 18px 32px; }
+    .foot-main { gap: 12px 26px; }
+    .foot b { font-size: 22px; }
+    .foot span { font-size: 15.5px; }
+    .call { padding: 10px 24px; font-size: 16px; }
+    .qr img { width: 112px; height: 112px; }
+    .foot .qr span { font-size: 13px; }
+    .foot .biz { font-size: 13.5px; padding-top: 14px; }
+    .tools { max-width: 1040px; margin: 0 auto 56px; padding: 0 8px; }
+  }
+
   @media (max-width: 680px) {
-    body { font-size: 15px; }
+    body { font-size: 16px; line-height: 1.75; }
+    .tb-in { padding: 0 16px; height: 60px; }
+    .tb-logo img { width: 34px; height: 34px; }
+    .tb-logo .en { font-size: 20px; }
+    .tb-logo b, .topbar nav .tb-home-full { display: none; }
+    .topbar nav { gap: 14px; font-size: 14.5px; }
     .sheet { margin: 0; border: 0; border-radius: 0; }
-    .pad, .head, .who, .foot { padding-left: 16px; padding-right: 16px; }
+    .pad, .head, .who, .foot { padding-left: 20px; padding-right: 20px; }
+    .head { padding-top: 36px; padding-bottom: 34px; }
+    .head h1 { font-size: 27px; }
+    .head p { font-size: 16px; }
+    .sec { padding-top: 46px; }
+    .sec-title { margin-bottom: 18px; }
+    .sec-title .en { font-size: 25px; }
+    .sec-title h2 { font-size: 22px; }
     .worries, .monthly, .two, .who ul, .faq { grid-template-columns: 1fr; }
-    .two { gap: 6px; }
-    .who { grid-template-columns: 1fr; gap: 8px; }
-    .item { grid-template-columns: 34px 1fr; }
-    .item .price { grid-column: 2; grid-row: auto; text-align: left; font-size: 19px; }
+    .worries { gap: 10px; }
+    .worries li { padding: 15px 18px; font-size: 15.5px; border-radius: 12px; }
+    .two { gap: 40px; }
+    .faq { gap: 20px; }
+    .faq dt { font-size: 16px; }
+    .faq dd { font-size: 15.5px; margin-top: 4px; }
+    .who { grid-template-columns: 1fr; gap: 10px; margin-top: 50px; padding-top: 32px; padding-bottom: 32px; }
+    .item { grid-template-columns: 36px 1fr; padding: 24px 0; gap: 6px 14px; }
+    .item h3 { font-size: 19px; }
+    .item p { font-size: 15.5px; }
+    .item .price { grid-column: 2; grid-row: auto; text-align: left; font-size: 22px; margin-top: 4px; }
     .item .price small { display: inline; margin-left: 6px; }
-    .item.best { margin: 6px -8px; padding: 14px 8px; }
-    .tools { margin: 14px auto 24px; padding: 0 16px; }
+    .item.best { margin: 8px -10px; padding: 22px 10px; }
+    .m-head { margin-top: 34px; }
+    .monthly { gap: 12px; margin-top: 14px; }
+    .monthly div { padding: 18px 20px; border-radius: 12px; }
+    .monthly b { font-size: 18px; }
+    .monthly .m-price { font-size: 20px; }
+    .monthly p { font-size: 15.5px; margin-top: 4px; }
+    .flow li, .promise li { font-size: 15.5px; padding-top: 12px; padding-bottom: 12px; }
+    .foot { grid-template-columns: 1fr; padding-top: 32px; padding-bottom: 32px; }
+    .qr { justify-self: start; }
+    .tools { margin: 18px auto 28px; padding: 0 20px; }
   }
 
   /* A4 한 장으로 인쇄 */
@@ -167,7 +268,7 @@
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     body { background: #fff; font-size: 12.5px; line-height: 1.55; }
     .sheet { margin: 0; max-width: none; border: 0; border-radius: 0; zoom: .81; }
-    .tools { display: none; }
+    .tools, .topbar { display: none; }
     .pad { padding: 0 26px; }
     .head { padding: 20px 26px 18px; }
     .brand { margin-bottom: 12px; }
@@ -218,6 +319,19 @@
 </head>
 <body>
 
+<header class="topbar">
+  <div class="tb-in">
+    <a class="tb-logo" href="/" aria-label="마케팅지니 홈으로">
+      <img src="logo.png" alt="" width="38" height="38">
+      <span class="en">Marketing Jini</span><b>마케팅지니</b>
+    </a>
+    <nav>
+      <a href="/">← <span class="tb-home-full">마케팅지니 </span>홈</a>
+      <a class="tb-cta" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡 상담 ↗</a>
+    </nav>
+  </div>
+</header>
+
 <article class="sheet">
   <header class="head">
     <div class="brand">
@@ -226,7 +340,7 @@
       <span class="en">Marketing Jini · 수원·화성·동탄</span>
     </div>
     <h1>센터는 사진만 보내 주세요.<br>보호자가 찾는 길은 마케팅지니가 정리합니다.</h1>
-    <p>주야간보호센터 현장 근무와 가족 돌봄 경험으로, 보호자가 궁금해하는 정보를 센터의 블로그·네이버 플레이스·당근·안내 웹페이지에 담습니다.</p>
+    <p>주야간보호센터 현장 근무와 가족 돌봄 경험으로, 보호자가 궁금해하는 정보를 센터의 블로그·네이버 플레이스·당근·홈페이지에 담습니다.</p>
   </header>
 
   <section class="sec pad">
@@ -256,7 +370,7 @@
       </li>
       <li class="item">
         <span class="no en">C</span>
-        <h3>휴대폰 안내 웹페이지</h3>
+        <h3>센터 홈페이지</h3>
         <span class="price">30만 원<small>도메인 비용 별도</small></span>
         <p>프로그램·하루 일과·이용 비용·송영·오시는 길·전화 연결을 한 페이지에. 플레이스 ‘홈페이지’ 칸에 연결해 드립니다.</p>
       </li>
@@ -264,7 +378,7 @@
         <span class="no en">D</span>
         <h3>시작 패키지 <span class="badge">추천</span></h3>
         <span class="price">50만 원<small>B + C 따로 하면 60만 원</small></span>
-        <p>B 블로그·플레이스 정비 + C 안내 웹페이지를 한 번에. 보호자가 플레이스에서 웹페이지·블로그를 거쳐 전화까지 오는 길을 함께 정리합니다.</p>
+        <p>B 블로그·플레이스 정비 + C 홈페이지를 한 번에. 보호자가 플레이스에서 홈페이지·블로그를 거쳐 전화까지 오는 길을 함께 정리합니다.</p>
       </li>
     </ol>
     <div class="m-head"><h3>월간 관리</h3><span>1건 = 블로그 글 1편 + 플레이스 소식 + 당근 소식 · 원하시는 센터만</span></div>
@@ -315,7 +429,7 @@
       <li>치매 어머니를 돌보는 가족 보호자</li>
       <li>주야간보호센터 요양보호사 약 1년</li>
       <li>센터 블로그·플레이스 1년 넘게 직접 운영</li>
-      <li>AI로 센터 안내 웹페이지 제작</li>
+      <li>AI로 센터 홈페이지 제작</li>
     </ul>
   </section>
 
@@ -333,7 +447,7 @@
 
 </article>
 
-<div class="tools"><button type="button" onclick="window.print()">인쇄 · PDF로 저장</button></div>
+<div class="tools"><a href="/">← 마케팅지니 홈으로</a><button type="button" onclick="window.print()">인쇄 · PDF로 저장</button></div>
 
 </body>
 </html>

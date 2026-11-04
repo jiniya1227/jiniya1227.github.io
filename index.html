@@ -6,13 +6,13 @@
 <title>마케팅지니 | 수원·화성·동탄 주야간보호센터 온라인 홍보</title>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
-<meta name="description" content="수원·화성·동탄 주야간보호센터를 위한 온라인 홍보. 요양보호사로 일했고 지금도 가족을 돌보는 보호자인 마케터가 센터의 블로그·네이버 플레이스·당근·안내 웹페이지를 함께 정리합니다.">
+<meta name="description" content="수원·화성·동탄 주야간보호센터를 위한 온라인 홍보. 요양보호사로 일했고 지금도 가족을 돌보는 보호자인 마케터가 센터의 블로그·네이버 플레이스·당근·홈페이지를 함께 정리합니다.">
 <!-- 카카오톡·문자로 링크를 보낼 때 보이는 미리보기 -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://marketingjini.com/">
 <meta property="og:image" content="https://marketingjini.com/og.png?v=20261104d">
 <meta property="og:title" content="마케팅지니 | 수원·화성·동탄 주야간보호센터 온라인 홍보">
-<meta property="og:description" content="센터를 직접 찾아가 돕는, 보호자인 마케터. 블로그·플레이스·당근·안내 웹페이지와 무료 AI 추천 확인">
+<meta property="og:description" content="센터를 직접 찾아가 돕는, 보호자인 마케터. 블로그·플레이스·당근·홈페이지와 무료 AI 추천 확인">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
@@ -242,7 +242,54 @@
   footer .biz b { color: var(--ink); font-weight: 700; }
   footer .copy { grid-column: 1 / -1; color: var(--ink-faint); font-size: 13px; }
   @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; } }
+  /* 자주 묻는 질문 */
+  .faq-list { display: grid; gap: 12px; max-width: 900px; }
+  .faq-list details { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 0 24px; }
+  .faq-list details[open] { border-color: color-mix(in srgb, var(--violet) 40%, var(--line)); }
+  .faq-list summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 14px; padding: 20px 0; font-weight: 700; font-size: 17px; color: var(--ink); }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary .n { font-size: 22px; color: var(--violet); min-width: 28px; }
+  .faq-list summary .q { flex: 1; }
+  .faq-list summary::after { content: "+"; color: var(--violet); font-size: 24px; font-weight: 400; line-height: 1; }
+  .faq-list details[open] summary::after { content: "−"; }
+  .faq-list details p { margin: -4px 0 0; padding: 0 0 22px 42px; color: var(--ink-soft); }
+  @media (max-width: 560px) { .faq-list details { padding: 0 18px; } .faq-list summary { font-size: 16px; gap: 10px; } .faq-list details p { padding-left: 0; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "name": "마케팅지니",
+      "alternateName": "Marketing Jini",
+      "url": "https://marketingjini.com/",
+      "logo": "https://marketingjini.com/logo.png",
+      "image": "https://marketingjini.com/og.png",
+      "description": "수원·화성·동탄 주야간보호센터의 네이버 블로그·플레이스·당근·홈페이지를 정리하는 온라인 홍보 서비스",
+      "telephone": "+82-10-5904-5300",
+      "address": {"@type": "PostalAddress", "addressRegion": "경기도", "addressLocality": "수원시 권선구", "addressCountry": "KR"},
+      "areaServed": ["수원시", "화성시", "동탄"],
+      "sameAs": ["https://pf.kakao.com/_rxeExeX"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      {"@type": "Question", "name": "어떤 홍보를 도와주시나요?", "acceptedAnswer": {"@type": "Answer", "text": "주야간보호센터의 네이버 블로그와 플레이스를 정리하고, 보호자가 휴대폰으로 보기 편한 센터 홈페이지를 만들어요. 월간 관리를 맡기시면 블로그 글과 플레이스·당근 소식도 작성해 드립니다."}},
+      {"@type": "Question", "name": "수원·화성·동탄 외 지역도 상담할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 수원·화성·동탄은 직접 방문하고, 그 밖의 지역은 온라인으로 상담합니다. 방문요양기관과 요양원도 상담할 수 있어요."}},
+      {"@type": "Question", "name": "홍보 비용은 얼마이고, 견적은 어떻게 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "블로그·플레이스 정비는 30만 원, 센터 홈페이지 제작은 30만 원, 두 가지를 함께 진행하면 50만 원입니다. 부가세와 홈페이지 도메인 비용은 별도예요. 상담 후 작업 범위, 수정 횟수, 일정, 최종 금액을 견적서로 안내해 드립니다."}},
+      {"@type": "Question", "name": "블로그나 네이버 플레이스가 없어도 시작할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 상담할 때 지금 운영 중인 채널이 있는지 알려 주세요. 아무것도 없다면 센터 상황을 듣고 무엇부터 준비하면 좋을지 함께 정해요."}},
+      {"@type": "Question", "name": "기존 블로그와 플레이스에서 어떤 부분을 정리해 주시나요?", "acceptedAnswer": {"@type": "Answer", "text": "블로그는 메뉴·카테고리·소개글을, 플레이스는 소개 문구·사진 순서·기본 정보를 살펴봐요. 기존 글은 이어갈 부분과 정리할 부분을 함께 정하고, 블로그와 플레이스도 연결해 드립니다."}},
+      {"@type": "Question", "name": "당근 홍보나 홈페이지 제작만 따로 맡길 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "센터 홈페이지는 단독으로 제작할 수 있어요. 당근 소식은 월간 관리에 포함돼요. 당근만 원하시면 상담할 때 필요한 작업을 알려 주세요."}},
+      {"@type": "Question", "name": "센터에서 준비해야 할 사진이나 자료가 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "센터 활동 사진과 활동 이름, 한 줄 설명이면 글을 시작할 수 있어요. 밴드나 카톡방에 평소처럼 올려 주시면, 글에 필요한 정보는 제가 추가로 여쭤볼게요."}},
+      {"@type": "Question", "name": "어르신 얼굴이 나온 사진은 어떻게 처리하나요?", "acceptedAnswer": {"@type": "Answer", "text": "사용에 동의받은 사진만 쓰고, 어르신 얼굴은 모자이크해요. 글과 사진은 센터에서 확인한 뒤 게시합니다."}},
+      {"@type": "Question", "name": "한 번만 맡길 수 있나요, 매달 관리도 가능한가요?", "acceptedAnswer": {"@type": "Answer", "text": "블로그·플레이스 정비나 홈페이지 제작은 한 번만 맡기실 수 있어요. 꾸준히 소식을 올리고 싶다면 월 4건·8건·12건 중에서 고르시면 됩니다. 1건은 블로그 글 1편과 플레이스·당근 소식으로 구성돼요."}},
+      {"@type": "Question", "name": "무료 AI 검색 진단에서는 무엇을 확인해 주시나요?", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT·제미나이·네이버 AI에 보호자가 물어볼 만한 질문을 넣어, 우리 센터가 답변에 나오는지 화면으로 보여드려요. 블로그와 플레이스에서 빠진 정보도 살펴보고, 무엇부터 보완하면 좋을지 알려드립니다."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -256,6 +303,7 @@
       <a href="#story">소개</a>
       <a href="#work">해본 일</a>
       <a href="#ai">AI 검색</a>
+      <a href="#faq">자주 묻는 질문</a>
       <a href="service/">상품·가격</a>
       <a class="cta" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡 상담 ↗</a>
     </nav>
@@ -269,7 +317,7 @@
       <div>
         <span class="eyebrow en">Marketing Jini · Suwon · Hwaseong · Dongtan</span>
         <h1>수원·화성·동탄<br>주야간보호센터를 위한<br><em>온라인 홍보.</em></h1>
-        <p class="strong">센터를 직접 찾아가 돕는, 보호자인 마케터.<br>블로그·네이버 플레이스·당근·안내 웹페이지를 함께 정리합니다.</p>
+        <p class="strong">센터를 직접 찾아가 돕는, 보호자인 마케터.<br>블로그·네이버 플레이스·당근·홈페이지를 함께 정리합니다.</p>
         <p class="soft">보호자가 무엇을 궁금해하는지 알기에, 그 답을 센터의 온라인에 담습니다.</p>
         <div class="btns">
           <a class="btn" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 무료 진단 신청 <span>↗</span></a>
@@ -309,7 +357,7 @@
           </div>
           <p class="note">센터는 돌봄에 집중하세요.<br><b>온라인은 함께 정리할게요.</b></p>
         </div>
-        <figcaption class="en">Web page · Blog · Place</figcaption>
+        <figcaption class="en">Homepage · Blog · Place</figcaption>
       </figure>
     </div>
 
@@ -317,7 +365,7 @@
       <a href="#services"><span class="ic"><svg viewBox="0 0 32 32"><rect x="7" y="5" width="18" height="22" rx="3"/><path d="M11 12h10M11 17h10M11 22h6"/></svg></span>블로그</a>
       <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#3fa37a"><path d="M16 28s-8.5-7.8-8.5-14.3a8.5 8.5 0 0 1 17 0C24.5 20.2 16 28 16 28Z"/><circle cx="16" cy="13.5" r="3.2"/></svg></span>플레이스</a>
       <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#e8823a"><path d="M16 5c5.5 0 9.5 4 9.5 9.5 0 6.5-6 10.5-9.5 12.5-3.5-2-9.5-6-9.5-12.5C6.5 9 10.5 5 16 5Z"/><path d="M12.5 15.5 15 18l4.5-5"/></svg></span>당근</a>
-      <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#5566e8"><rect x="10" y="4" width="12" height="24" rx="3"/><path d="M14.5 24h3"/></svg></span>웹페이지</a>
+      <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#5566e8"><rect x="10" y="4" width="12" height="24" rx="3"/><path d="M14.5 24h3"/></svg></span>홈페이지</a>
       <a href="#ai"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#b8862b"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7"/><path d="M14 10.5c.3 2 1.2 3 3.2 3.5-2 .5-2.9 1.5-3.2 3.5-.3-2-1.2-3-3.2-3.5 2-.5 2.9-1.5 3.2-3.5Z"/></svg></span>AI 검색</a>
     </nav>
   </div>
@@ -338,7 +386,7 @@
           <li><b>가족 돌봄</b><span>치매 어머니를 함께 사는 집에서 돌보는 보호자</span></li>
           <li><b>현장 경력</b><span>주야간보호센터 요양보호사 약 1년</span></li>
           <li><b>온라인 운영</b><span>주야간보호센터 블로그·네이버 플레이스 직접 운영</span></li>
-          <li><b>AI 활용</b><span>AI로 센터 안내 웹페이지와 콘텐츠 제작</span></li>
+          <li><b>AI 활용</b><span>AI로 센터 홈페이지와 콘텐츠 제작</span></li>
         </ul>
       </aside>
     </div>
@@ -346,12 +394,12 @@
       <div class="card">
         <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><path d="M16 27s-10-6.2-10-13.2A5.6 5.6 0 0 1 16 10a5.6 5.6 0 0 1 10 3.8C26 20.8 16 27 16 27Z"/></svg></span><span class="label">FAMILY CAREGIVER</span></div>
         <h3>처음 겪는 돌봄의 막막함을 압니다</h3>
-        <p>어머니를 돌보며 낯선 제도와 용어 앞에서 막막했던 순간이 많았습니다. 그 경험이 제가 정보를 쉽게 정리하려는 이유입니다.</p>
+        <p>가족이 다닐 센터를 알아볼 때 “센터에서 하루를 어떻게 보낼까?”, “처음 가는 날에도 잘 적응할 수 있을까?”가 가장 궁금했습니다. 낯선 제도와 용어 앞에서 막막했던 그 경험이, 제가 정보를 쉽게 정리하려는 이유입니다.</p>
       </div>
       <div class="card">
         <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><path d="M5 15 16 6l11 9"/><path d="M8 13v13h16V13"/><path d="M14 26v-6h4v6"/></svg></span><span class="label">CARE CENTER</span></div>
         <h3>센터 안의 하루를 직접 겪었습니다</h3>
-        <p>주야간보호센터에서 일하며 프로그램, 식사, 송영처럼 보호자가 꼭 묻는 것들이 실제로 어떻게 운영되는지 봤습니다.</p>
+        <p>요양보호사로 일하며 알게 됐습니다. 센터에서는 익숙한 하루가, 처음 센터를 알아보는 보호자에게는 꼭 듣고 싶은 이야기라는 것을요.</p>
       </div>
       <div class="card">
         <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M10 17l4-4 3 3 5-5"/></svg></span><span class="label">ONLINE MANAGER</span></div>
@@ -361,7 +409,7 @@
       <div class="card">
         <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><path d="M16 9c-3-2.2-7-2.6-11-1.5v17c4-1.1 8-.7 11 1.5 3-2.2 7-2.6 11-1.5v-17C23 6.4 19 6.8 16 9Z"/><path d="M16 9v17"/></svg></span><span class="label">KEEP LEARNING</span></div>
         <h3>AI를 꾸준히 공부합니다</h3>
-        <p>AI로 웹페이지와 콘텐츠를 만드는 방법을 계속 익히고, 배운 것은 바로 실제 작업에 적용합니다.</p>
+        <p>AI로 홈페이지와 콘텐츠를 만드는 방법을 계속 익히고, 배운 것은 바로 실제 작업에 적용합니다.</p>
       </div>
     </div>
   </div>
@@ -398,8 +446,8 @@
   <div class="wrap">
     <div class="head">
       <span class="eyebrow en">AI search</span>
-      <h2>네이버 블로그만으로는<br>ChatGPT에 나오기 어렵습니다.</h2>
-      <p>네이버 블로그는 ChatGPT·Claude 같은 AI가 글을 가져가지 못하도록 막아 두었습니다(2026년 11월 확인). 보호자가 AI에게 우리 동네 센터를 물었을 때 정확한 정보가 나오려면, 센터 이름으로 된 안내 웹페이지가 함께 있어야 합니다.</p>
+      <h2>네이버 블로그만으로는<br>AI 검색에 나오기 어렵습니다.</h2>
+      <p>네이버 블로그는 ChatGPT·Claude·구글 AI 같은 바깥 AI 검색이 글을 가져가지 못하도록 막아 두었습니다(2026년 11월 확인). 보호자가 AI에게 우리 동네 센터를 물었을 때 정확한 정보가 나오려면, 센터 이름으로 된 홈페이지가 함께 있어야 합니다.</p>
     </div>
     <div class="ai-box">
       <div class="card">
@@ -414,7 +462,7 @@
         <p class="label">이런 질문으로 확인합니다</p>
         <ul class="ai-q">
           <li>수원 권선구 주간보호센터 추천해 줘</li>
-          <li>근처에 송영 되는 주간보호센터 있어?</li>
+          <li>부모님이 다닐 만한 주간보호센터, 우리 동네에 어디 있어?</li>
           <li>장기요양 4등급 주간보호 비용은 얼마야?</li>
         </ul>
       </div>
@@ -436,8 +484,8 @@
         <p>블로그 메뉴·카테고리·소개글과 플레이스 소개 문구·사진 순서·기본 정보를 보호자가 보는 순서에 맞춰 정리하고, 블로그와 플레이스를 연결합니다.</p>
       </div>
       <div class="card">
-        <span class="no">02</span><span class="label">WEB PAGE</span>
-        <h3>안내 웹페이지 제작</h3>
+        <span class="no">02</span><span class="label">HOMEPAGE</span>
+        <h3>홈페이지 제작</h3>
         <p>프로그램·하루 일과·이용 비용·송영·오시는 길·전화 연결을 한 장에 담은 휴대폰용 페이지를 만들어, 플레이스 ‘홈페이지’ 칸에 연결합니다. AI 검색에서도 센터 정보를 읽을 수 있게 정리합니다.</p>
       </div>
       <div class="card">
@@ -464,6 +512,59 @@
   </div>
 </section>
 
+<section id="faq">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow en">FAQ</span>
+      <h2>센터장님이 자주 묻는<br>질문 10가지.</h2>
+      <p>궁금한 질문을 누르면 답이 열립니다. 더 궁금한 점은 카카오톡 채널로 편하게 물어봐 주세요.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary><span class="n en">01</span><span class="q">어떤 홍보를 도와주시나요?</span></summary>
+        <p>주야간보호센터의 네이버 블로그와 플레이스를 정리하고, 보호자가 휴대폰으로 보기 편한 센터 홈페이지를 만들어요. 월간 관리를 맡기시면 블로그 글과 플레이스·당근 소식도 작성해 드립니다.</p>
+      </details>
+      <details>
+        <summary><span class="n en">02</span><span class="q">수원·화성·동탄 외 지역도 상담할 수 있나요?</span></summary>
+        <p>네. 수원·화성·동탄은 직접 방문하고, 그 밖의 지역은 온라인으로 상담합니다. 방문요양기관과 요양원도 상담할 수 있어요.</p>
+      </details>
+      <details>
+        <summary><span class="n en">03</span><span class="q">홍보 비용은 얼마이고, 견적은 어떻게 받나요?</span></summary>
+        <p>블로그·플레이스 정비는 30만 원, 센터 홈페이지 제작은 30만 원, 두 가지를 함께 진행하면 50만 원입니다. 부가세와 홈페이지 도메인 비용은 별도예요. 상담 후 작업 범위, 수정 횟수, 일정, 최종 금액을 견적서로 안내해 드립니다.</p>
+      </details>
+      <details>
+        <summary><span class="n en">04</span><span class="q">블로그나 네이버 플레이스가 없어도 시작할 수 있나요?</span></summary>
+        <p>네. 상담할 때 지금 운영 중인 채널이 있는지 알려 주세요. 아무것도 없다면 센터 상황을 듣고 무엇부터 준비하면 좋을지 함께 정해요.</p>
+      </details>
+      <details>
+        <summary><span class="n en">05</span><span class="q">기존 블로그와 플레이스에서 어떤 부분을 정리해 주시나요?</span></summary>
+        <p>블로그는 메뉴·카테고리·소개글을, 플레이스는 소개 문구·사진 순서·기본 정보를 살펴봐요. 기존 글은 이어갈 부분과 정리할 부분을 함께 정하고, 블로그와 플레이스도 연결해 드립니다.</p>
+      </details>
+      <details>
+        <summary><span class="n en">06</span><span class="q">당근 홍보나 홈페이지 제작만 따로 맡길 수 있나요?</span></summary>
+        <p>센터 홈페이지는 단독으로 제작할 수 있어요. 당근 소식은 월간 관리에 포함돼요. 당근만 원하시면 상담할 때 필요한 작업을 알려 주세요.</p>
+      </details>
+      <details>
+        <summary><span class="n en">07</span><span class="q">센터에서 준비해야 할 사진이나 자료가 있나요?</span></summary>
+        <p>센터 활동 사진과 활동 이름, 한 줄 설명이면 글을 시작할 수 있어요. 밴드나 카톡방에 평소처럼 올려 주시면, 글에 필요한 정보는 제가 추가로 여쭤볼게요.</p>
+      </details>
+      <details>
+        <summary><span class="n en">08</span><span class="q">어르신 얼굴이 나온 사진은 어떻게 처리하나요?</span></summary>
+        <p>사용에 동의받은 사진만 쓰고, 어르신 얼굴은 모자이크해요. 글과 사진은 센터에서 확인한 뒤 게시합니다.</p>
+      </details>
+      <details>
+        <summary><span class="n en">09</span><span class="q">한 번만 맡길 수 있나요, 매달 관리도 가능한가요?</span></summary>
+        <p>블로그·플레이스 정비나 홈페이지 제작은 한 번만 맡기실 수 있어요. 꾸준히 소식을 올리고 싶다면 월 4건·8건·12건 중에서 고르시면 됩니다. 1건은 블로그 글 1편과 플레이스·당근 소식으로 구성돼요.</p>
+      </details>
+      <details>
+        <summary><span class="n en">10</span><span class="q">무료 AI 검색 진단에서는 무엇을 확인해 주시나요?</span></summary>
+        <p>ChatGPT·제미나이·네이버 AI에 보호자가 물어볼 만한 질문을 넣어, 우리 센터가 답변에 나오는지 화면으로 보여드려요. 블로그와 플레이스에서 빠진 정보도 살펴보고, 무엇부터 보완하면 좋을지 알려드립니다.</p>
+      </details>
+    </div>
+    <p class="svc-note"><a href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 물어보기 ↗</a> · <a href="service/">상품 구성과 가격 보기 ↗</a></p>
+  </div>
+</section>
+
 <section id="blogs">
   <div class="wrap">
     <div class="head">
@@ -475,7 +576,7 @@
         <span class="label">FOR CENTER DIRECTORS</span>
         <h3>마케팅지니</h3>
         <p class="sub">고객의 시선으로 만드는 온라인 홍보</p>
-        <p>센터 웹페이지 제작, 블로그·플레이스 운영 노하우, AI 활용법을 실제 작업 기록과 함께 나누는 사업 블로그입니다.</p>
+        <p>센터 홈페이지 제작, 블로그·플레이스 운영 노하우, AI 활용법을 실제 작업 기록과 함께 나누는 사업 블로그입니다.</p>
       </div>
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="8" width="44" height="48" rx="4"/><path d="M19 22h26M19 31h26M19 40h16"/></svg>
     </div>
