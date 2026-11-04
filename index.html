@@ -240,6 +240,8 @@
   footer .logo .en { font-size: 21px; }
   footer .biz { line-height: 1.9; }
   footer .biz b { color: var(--ink); font-weight: 700; }
+  footer .biz .bi { white-space: nowrap; }
+  @media (max-width: 560px) { footer .biz .bi { display: block; } footer .biz .sep, footer .biz br { display: none; } footer .biz .more { display: block; margin-top: 8px; } }
   footer .copy { grid-column: 1 / -1; color: var(--ink-faint); font-size: 13px; }
   @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; } }
   /* 자주 묻는 질문 */
@@ -607,10 +609,10 @@
       <span class="en">Marketing Jini</span>
     </span>
     <div class="biz">
-      <b>상호</b> 마케팅지니 · <b>대표</b> 허효진 · <b>사업자등록번호</b> 529-30-02199<br>
-      <b>사업장</b> 경기도 수원시 권선구<br>
-      <b>상담</b> <a href="https://pf.kakao.com/_rxeExeX" target="_blank" rel="noopener">카카오톡 채널 ‘마케팅지니’</a> · <b>전화</b> <a href="tel:010-5904-5300">010-5904-5300</a><br>
-      수원·화성·동탄은 직접 방문, 그 밖의 지역은 온라인으로 함께합니다. 학원·동네 가게 홍보도 상담은 가능해요.
+      <span class="bi"><b>상호</b> 마케팅지니</span><span class="sep"> · </span><span class="bi"><b>대표</b> 허효진</span><span class="sep"> · </span><span class="bi"><b>사업자등록번호</b> 529-30-02199</span><br>
+      <span class="bi"><b>사업장</b> 경기도 수원시 권선구</span><br>
+      <span class="bi"><b>상담</b> <a href="https://pf.kakao.com/_rxeExeX" target="_blank" rel="noopener">카카오톡 채널 ‘마케팅지니’</a></span><span class="sep"> · </span><span class="bi"><b>전화</b> <a href="tel:010-5904-5300">010-5904-5300</a></span><br>
+      <span class="more">수원·화성·동탄은 직접 방문, 그 밖의 지역은 온라인으로 함께합니다. 학원·동네 가게 홍보도 상담은 가능해요.</span>
     </div>
     <p class="copy">© 2026 마케팅지니 · Marketing Jini — 고객의 시선으로 만드는 온라인 홍보</p>
   </div>
