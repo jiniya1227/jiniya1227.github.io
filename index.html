@@ -244,6 +244,44 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --warn: #ff9b85; } }
   :root[data-theme="dark"] { --warn: #ff9b85; }
 
+  /* 무료 진단 3단계 + 진단서 샘플 */
+  .check-flow { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .check-flow h3 { font-size: 24px; margin: 4px 0 20px; }
+  .flow { list-style: none; padding: 0; margin: 0; }
+  .flow li { display: grid; grid-template-columns: 56px 1fr; gap: 4px 0; padding: 18px 0; border-top: 1px solid var(--line); }
+  .flow li:last-child { border-bottom: 1px solid var(--line); }
+  .flow .n { grid-row: span 2; font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 30px; color: var(--violet); line-height: 1.1; }
+  .flow b { font-size: 17.5px; }
+  .flow span { color: var(--ink-soft); font-size: 15.5px; }
+  .flow-note { margin-top: 14px; font-size: 14px; color: var(--ink-faint); }
+  .report { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: 20px; padding: 26px 24px 22px; box-shadow: var(--shadow); }
+  .report .stamp { position: absolute; top: 18px; right: 18px; font-size: 13px; font-weight: 700; color: var(--warn); border: 1.5px solid var(--warn); border-radius: 8px; padding: 2px 10px; transform: rotate(4deg); }
+  .report .r-title { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 19px; padding-right: 64px; }
+  .report .r-date { font-size: 13px; color: var(--ink-faint); margin: 2px 0 16px; }
+  .report h4 { margin: 16px 0 6px; font-size: 13px; letter-spacing: 1.2px; color: var(--ink-faint); font-weight: 500; }
+  .r-rows { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+  .r-rows li { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+  .r-rows .ok { color: #3fa37a; font-weight: 700; white-space: nowrap; }
+  .r-rows .no { color: var(--warn); font-weight: 700; white-space: nowrap; }
+  .r-rows .mid { color: #b8862b; font-weight: 700; white-space: nowrap; }
+  .r-shots { display: flex; gap: 8px; margin-top: 10px; }
+  .r-shots span { flex: 1; height: 54px; border-radius: 8px; background: var(--lav); border: 1px solid var(--line); display: grid; place-items: center; font-size: 12px; color: var(--ink-faint); }
+  .r-fix { margin: 0; padding-left: 20px; font-size: 15px; color: var(--ink-soft); }
+  .r-fix li { padding: 3px 0; }
+  .report .r-note { margin-top: 14px; font-size: 12.5px; color: var(--ink-faint); }
+  @media (max-width: 860px) { .check-flow { grid-template-columns: 1fr; margin-top: 44px; } }
+
+  /* 휴대폰 아래 고정 버튼 */
+  .dock { display: none; }
+  @media (max-width: 760px) {
+    .dock { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
+    .dock a { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: 16px; border-radius: 12px; padding: 13px 8px; }
+    .dock .call { color: var(--violet); border: 1.5px solid var(--violet); background: var(--bg); }
+    .dock .talk { color: #fff; background: var(--grad); }
+    .dock svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    body { padding-bottom: calc(74px + env(safe-area-inset-bottom)); }
+  }
+
   /* 할 수 있는 일 */
   .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .svc-grid .no { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 34px; color: var(--violet); line-height: 1; margin-bottom: 14px; display: block; }
@@ -559,6 +597,45 @@
         </div>
       </div>
     </div>
+
+    <!-- 무료 진단 3단계 + 진단서 샘플 (샘플 내용은 가상의 센터입니다) -->
+    <div class="check-flow">
+      <div>
+        <span class="label">HOW IT WORKS</span>
+        <h3>무료 진단은 이렇게 진행됩니다</h3>
+        <ol class="flow">
+          <li><span class="n">01</span><b>카톡으로 센터 이름 보내기</b><span>센터 이름과 지역만 알려 주시면 됩니다. 블로그·플레이스 주소가 있으면 함께 보내 주세요.</span></li>
+          <li><span class="n">02</span><b>AI 3곳 · 플레이스 · 블로그 확인</b><span>ChatGPT·제미나이·네이버 AI에 보호자가 물을 만한 질문을 넣어 보고, 플레이스와 블로그에 빠진 정보를 살펴봅니다.</span></li>
+          <li><span class="n">03</span><b>캡처를 붙인 진단서 받기</b><span>실제로 확인한 화면과 함께, 무엇부터 고치면 좋을지 순서를 정리해 카톡으로 보내 드립니다.</span></li>
+        </ol>
+        <p class="flow-note">진단은 무료이고, 진단만 받으셔도 괜찮습니다.</p>
+      </div>
+      <figure class="report" style="margin:0" aria-label="무료 진단서 샘플">
+        <span class="stamp">샘플</span>
+        <p class="r-title">○○주간보호센터 무료 진단서</p>
+        <p class="r-date">예시 · 수원시 ○○구</p>
+        <h4>AI 검색 확인 (질문 3개)</h4>
+        <ul class="r-rows">
+          <li><span>ChatGPT</span><span class="no">나오지 않음</span></li>
+          <li><span>제미나이</span><span class="no">나오지 않음</span></li>
+          <li><span>네이버 AI</span><span class="mid">이름만 나옴</span></li>
+        </ul>
+        <div class="r-shots" aria-hidden="true"><span>캡처 1</span><span>캡처 2</span><span>캡처 3</span></div>
+        <h4>플레이스 · 블로그</h4>
+        <ul class="r-rows">
+          <li><span>운영 시간 · 전화번호</span><span class="ok">있음</span></li>
+          <li><span>이용 비용 안내</span><span class="no">없음</span></li>
+          <li><span>송영 지역</span><span class="no">없음</span></li>
+        </ul>
+        <h4>고칠 순서</h4>
+        <ol class="r-fix">
+          <li>플레이스에 송영 지역과 이용 비용 안내 넣기</li>
+          <li>블로그 소개글에 센터 이름·지역 넣기</li>
+          <li>센터 이름으로 된 홈페이지 만들기</li>
+        </ol>
+        <figcaption class="r-note">이해를 돕기 위한 샘플이며, 실제 센터의 진단 결과가 아닙니다.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -707,6 +784,12 @@
     <p class="copy">© 2026 마케팅지니 · Marketing Jini — 고객의 시선으로 만드는 온라인 홍보</p>
   </div>
 </footer>
+
+<!-- 휴대폰에서만 화면 아래에 늘 보이는 상담 버튼 -->
+<nav class="dock" aria-label="바로 상담">
+  <a class="call" href="tel:010-5904-5300"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>전화 상담</a>
+  <a class="talk" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.8 0-8.5 3-8.5 6.7 0 2.4 1.6 4.5 4 5.7L6.8 20l4-2.5c.4 0 .8.1 1.2.1 4.8 0 8.5-3 8.5-6.8S16.8 4 12 4Z"/></svg>카톡 상담</a>
+</nav>
 
 </body>
 </html>
