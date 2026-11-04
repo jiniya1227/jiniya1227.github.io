@@ -3,245 +3,261 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>마케팅지니 | 현장을 아는 온라인 홍보</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='3' width='28' height='22' rx='7' fill='%23685382'/%3E%3Cpath d='M7 22 5.5 30 15 24Z' fill='%23685382'/%3E%3Cpath d='M15 6.5c.5 4.3 2.2 6 6.5 7.5-4.3 1.5-6 3.2-6.5 7.5-.5-4.3-2.2-6-6.5-7.5 4.3-1.5 6-3.2 6.5-7.5Z' fill='%23fff'/%3E%3C/svg%3E">
-<meta name="description" content="주야간보호센터 현장 경험과 가족 돌봄 경험을 바탕으로, 지역 사업장의 웹페이지·블로그·플레이스를 함께 만드는 마케팅지니입니다.">
+<title>마케팅지니 | 수원·화성·동탄 주야간보호센터 온라인 홍보</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta name="description" content="수원·화성·동탄 주야간보호센터를 위한 온라인 홍보. 요양보호사로 일했고 지금도 가족을 돌보는 보호자인 마케터가 센터의 블로그·네이버 플레이스·당근·안내 웹페이지를 함께 정리합니다.">
 <!-- 카카오톡·문자로 링크를 보낼 때 보이는 미리보기 -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://jiniya1227.github.io/">
-<meta property="og:image" content="https://jiniya1227.github.io/og.png">
-<meta property="og:title" content="마케팅지니 | 현장을 아는 온라인 홍보">
-<meta property="og:description" content="주야간보호센터·지역 소상공인을 위한 AI 웹페이지 제작과 블로그·플레이스 구축">
+<meta property="og:url" content="https://marketingjini.com/">
+<meta property="og:image" content="https://marketingjini.com/og.png?v=20261104d">
+<meta property="og:title" content="마케팅지니 | 수원·화성·동탄 주야간보호센터 온라인 홍보">
+<meta property="og:description" content="센터를 직접 찾아가 돕는, 보호자인 마케터. 블로그·플레이스·당근·안내 웹페이지와 무료 AI 추천 확인">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
 <style>
+  /* 브랜드 색 — 지니맵·마케팅지니 블로그 스킨과 같은 보라→파랑 계열 */
   :root {
     --bg: #ffffff;
-    --cream: #f8f6f0;
-    --ink: #302d36;
-    --ink-soft: #6b6672;
-    --ink-faint: #9a95a0;
-    --line: #e7e3ea;
-    --accent: #685382;
-    --accent-deep: #5b4873;
-    --accent-ink: #ffffff;
-    --on-accent-soft: rgba(255, 255, 255, .72);
-    --on-accent-line: rgba(255, 255, 255, .22);
-    --i-bg: #f0edf4; --i-line: #dbd3e4; --i-note: #e5ddee; --i-beige: #e7e4dc;
-    --i-leaf: #9da58e; --i-leaf2: #c4c7b0; --i-sun: #cdc2db; --i-house: #fcfbf5;
+    --soft: #f6f4fd;
+    --lav: #ece7fc;
+    --ink: #1f1a33;
+    --ink-soft: #565070;
+    --ink-faint: #858099;
+    --line: #e6e1f3;
+    --violet: #6a4be3;
+    --violet-deep: #3d2c8f;
+    --gold: #f0b44c;
+    --on-dark-soft: rgba(255, 255, 255, .8);
+    --on-dark-line: rgba(255, 255, 255, .2);
+    --grad: linear-gradient(135deg, #7b5cf0 0%, #5566e8 100%);
+    --grad-deep: linear-gradient(135deg, #3d2c8f 0%, #2f3a9e 100%);
+    --hero: linear-gradient(120deg, #eee9fd 0%, #f3effc 55%, #fbefdc 100%);
+    --shadow: 0 12px 32px rgba(76, 56, 170, .10);
+    --i-bg: #ece7fc; --i-line: #d9d0f5; --i-note: #e6defb; --i-beige: #efe9df;
+    --i-leaf: #9da58e; --i-leaf2: #c4c7b0; --i-sun: #f3cf8a; --i-house: #fdfcf8;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #1b1a1e; --cream: #232127; --ink: #f0edf3; --ink-soft: #b5afbb; --ink-faint: #868090;
-      --line: #35323b; --accent: #b9a3d6; --accent-deep: #3a3046; --accent-ink: #1b1a1e;
-      --on-accent-soft: rgba(255, 255, 255, .7); --on-accent-line: rgba(255, 255, 255, .16);
-      --i-bg: #2a2730; --i-line: #3e3947; --i-note: #3a3346; --i-beige: #34322d;
-      --i-leaf: #7b8270; --i-leaf2: #5f6454; --i-sun: #6b5f7e; --i-house: #4a4741;
+      --bg: #16141f; --soft: #1d1a29; --lav: #262238; --ink: #f2effa; --ink-soft: #bdb6d2; --ink-faint: #8f88a6;
+      --line: #322d45; --violet: #ab97ff;
+      --hero: linear-gradient(120deg, #241e3d 0%, #1f1b31 60%, #2a2219 100%);
+      --shadow: 0 12px 32px rgba(0, 0, 0, .35);
+      --i-bg: #2a2540; --i-line: #3d3657; --i-note: #352d52; --i-beige: #34312c;
+      --i-leaf: #7b8270; --i-leaf2: #5f6454; --i-sun: #8a7240; --i-house: #4a4741;
     }
   }
   :root[data-theme="dark"] {
-    --i-bg: #2a2730; --i-line: #3e3947; --i-note: #3a3346; --i-beige: #34322d;
-    --i-leaf: #7b8270; --i-leaf2: #5f6454; --i-sun: #6b5f7e; --i-house: #4a4741;
-    --bg: #1b1a1e; --cream: #232127; --ink: #f0edf3; --ink-soft: #b5afbb; --ink-faint: #868090;
-    --line: #35323b; --accent: #b9a3d6; --accent-deep: #3a3046; --accent-ink: #1b1a1e;
-    --on-accent-soft: rgba(255, 255, 255, .7); --on-accent-line: rgba(255, 255, 255, .16);
+    --bg: #16141f; --soft: #1d1a29; --lav: #262238; --ink: #f2effa; --ink-soft: #bdb6d2; --ink-faint: #8f88a6;
+    --line: #322d45; --violet: #ab97ff;
+    --hero: linear-gradient(120deg, #241e3d 0%, #1f1b31 60%, #2a2219 100%);
+    --shadow: 0 12px 32px rgba(0, 0, 0, .35);
+    --i-bg: #2a2540; --i-line: #3d3657; --i-note: #352d52; --i-beige: #34312c;
+    --i-leaf: #7b8270; --i-leaf2: #5f6454; --i-sun: #8a7240; --i-house: #4a4741;
   }
 
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Noto Sans KR", system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.75;
-    word-break: keep-all;
-    -webkit-font-smoothing: antialiased;
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans KR", system-ui, sans-serif; font-size: 17px; line-height: 1.75;
+    word-break: keep-all; -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { margin: 0; line-height: 1.32; }
-  p { margin: 0; }
+  h1, h2, h3 { margin: 0; font-family: "Noto Serif KR", serif; font-weight: 700; line-height: 1.35; letter-spacing: -.02em; }
+  p, ul, ol { margin: 0; }
   a { color: inherit; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+  .en { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; letter-spacing: .01em; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
-  .eyebrow {
-    display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px;
-    color: var(--accent); margin-bottom: 18px;
-  }
+  .eyebrow { display: block; font-size: 19px; color: var(--violet); margin-bottom: 14px; }
   .label { font-size: 12px; letter-spacing: 1.6px; color: var(--ink-faint); font-weight: 500; }
 
-  /* 상단 */
-  .top { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
-  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-  .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; font-size: 21px; letter-spacing: -.8px; line-height: 1; }
-  .logo svg { width: 30px; height: 30px; flex: 0 0 auto; }
-  .logo .w1 { font-weight: 500; color: var(--ink-soft); }
-  .logo .w2 { font-weight: 800; color: var(--accent); }
-  .top nav { display: flex; align-items: center; gap: 26px; font-size: 14.5px; }
-  .top nav a { text-decoration: none; color: var(--ink-soft); }
-  .top nav a:hover { color: var(--accent); }
-  .top nav .outline {
-    color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 7px 14px; font-weight: 600;
-  }
-  @media (max-width: 720px) { .top nav a:not(.outline) { display: none; } }
-
-  /* 첫 화면 */
-  .hero { padding: 84px 0 76px; }
-  .hero .wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
-  .hero h1 { font-size: clamp(34px, 5.6vw, 54px); font-weight: 700; letter-spacing: -2px; margin-bottom: 28px; }
-  .hero h1 em { font-style: normal; color: var(--accent); }
-  .hero .strong { font-size: 18px; font-weight: 600; margin-bottom: 14px; }
-  .hero .soft { color: var(--ink-soft); font-size: 16px; margin-bottom: 34px; }
+  /* 버튼 */
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
   .btn {
-    display: inline-flex; align-items: center; gap: 14px; text-decoration: none;
-    background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 15px;
-    padding: 15px 24px; border-radius: 6px;
+    display: inline-flex; align-items: center; gap: 12px; text-decoration: none;
+    background: var(--grad); color: #fff; font-weight: 700; font-size: 15.5px;
+    padding: 15px 24px; border-radius: 14px; box-shadow: 0 10px 24px rgba(91, 80, 230, .28);
   }
+  .btn.ghost { background: var(--bg); color: var(--violet); border: 1.5px solid var(--violet); box-shadow: none; }
   .btn span { font-size: 17px; }
 
-  .profile { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 30px 28px; }
-  .story-top { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-bottom: 44px; }
-  .story-top .head { margin-bottom: 0; }
-  @media (max-width: 860px) { .story-top { grid-template-columns: 1fr; gap: 28px; } }
-  .profile .who { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
-  .profile .who strong { font-size: 26px; font-weight: 700; letter-spacing: -1px; }
-  .profile .who small { font-size: 14px; color: var(--ink-soft); }
-  .profile .tagline { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
-  .rows { list-style: none; margin: 0; padding: 0; }
-  .rows li { display: grid; grid-template-columns: 82px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 15px; }
-  .rows li b { font-weight: 700; }
-  .rows li span { color: var(--ink-soft); }
-  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 56px 0 60px; } }
+  /* 상단 */
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .mark { width: 42px; height: 42px; border-radius: 12px; display: block; box-shadow: 0 8px 18px rgba(106, 75, 227, .28); flex: 0 0 auto; }
+  .logo .en { font-size: 25px; color: var(--ink); line-height: 1; }
+  .logo b { font-family: "Noto Serif KR", serif; font-size: 17px; color: var(--violet); margin-left: 6px; }
+  .top nav { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+  .top nav a { text-decoration: none; color: var(--ink-soft); font-weight: 500; }
+  .top nav a:hover { color: var(--violet); }
+  .top nav .cta { color: #fff; background: var(--grad); border-radius: 10px; padding: 8px 16px; font-weight: 700; }
+  @media (max-width: 760px) { .top nav a:not(.cta) { display: none; } .logo .en { font-size: 21px; } .logo b { display: none; } }
 
-  /* 첫 화면 일러스트 — 크기는 그림 너비(cqw)에 맞춰 함께 줄어듭니다 */
+  /* 첫 화면 */
+  .hero { padding: 28px 0 8px; }
+  .hero-panel { background: var(--hero); border-radius: 28px; padding: 56px 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .hero h1 { font-size: clamp(30px, 4.4vw, 46px); margin-bottom: 22px; }
+  .hero h1 em { font-style: normal; color: var(--violet); }
+  .hero .strong { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .hero .soft { color: var(--ink-soft); font-size: 16px; margin-bottom: 30px; }
+  .hero .area { display: block; font-size: 14px; color: var(--ink-soft); margin-top: 16px; }
+  @media (max-width: 900px) { .hero-panel { grid-template-columns: 1fr; padding: 40px 24px; } }
+
+  /* 첫 화면 일러스트 — 그림 파일 없이 코드로 그립니다 */
   .illus { margin: 0; container-type: inline-size; }
-  .stage { position: relative; width: 100%; aspect-ratio: 1 / 1.08; line-height: 1.5; }
+  .stage { position: relative; width: 100%; aspect-ratio: 1 / 1.02; line-height: 1.5; }
   .stage > * { position: absolute; }
-  .arch { inset: 6% 7% 4% 7%; background: var(--i-bg); border-radius: 46cqw 46cqw 3cqw 3cqw; }
+  .arch { inset: 6% 7% 4% 7%; background: color-mix(in srgb, var(--bg) 70%, transparent); border-radius: 46cqw 46cqw 4cqw 4cqw; }
   .ring { left: 12%; top: 9%; width: 76%; aspect-ratio: 1; border: 1px solid var(--i-line); border-radius: 50%; }
   .i-tag { top: 13%; left: 0; right: 0; text-align: center; font-size: 3.1cqw; letter-spacing: .25cqw; color: var(--ink-soft); }
-  .i-spark { right: 4%; top: 12%; width: 10cqw; fill: var(--accent); opacity: .8; }
+  .i-spark { right: 4%; top: 11%; width: 10cqw; fill: var(--gold); }
   .post {
     left: 15%; top: 22%; width: 60%; padding: 3.4cqw; transform: rotate(-4deg);
-    background: var(--bg); border: 1px solid var(--line); border-radius: 2cqw;
-    box-shadow: 0 2cqw 5cqw rgba(70, 50, 100, .10);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 2.4cqw; box-shadow: 0 2cqw 5cqw rgba(70, 50, 140, .14);
   }
   .p-head { display: flex; align-items: center; gap: 1.8cqw; font-size: 2.4cqw; color: var(--ink-soft); margin-bottom: 2.6cqw; }
-  .p-avatar { width: 6.4cqw; height: 6.4cqw; border-radius: 50%; background: var(--i-bg); display: grid; place-items: center; flex: 0 0 auto; }
-  .p-avatar svg { width: 3.4cqw; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+  .p-avatar { width: 6.4cqw; height: 6.4cqw; border-radius: 1.6cqw; background: var(--grad); display: grid; place-items: center; flex: 0 0 auto; }
+  .p-avatar svg { width: 3.6cqw; fill: #fff; }
   .p-dots { margin-left: auto; letter-spacing: -.2cqw; }
   .p-pic { display: block; width: 100%; height: auto; margin-bottom: 3cqw; }
-  .p-title { font-size: 4.2cqw; font-weight: 700; letter-spacing: -.25cqw; line-height: 1.35; margin-bottom: 2.4cqw; }
+  .p-title { font-family: "Noto Serif KR", serif; font-size: 4.2cqw; font-weight: 700; letter-spacing: -.2cqw; line-height: 1.35; margin-bottom: 2.4cqw; }
   .p-line { display: block; height: 1.2cqw; border-radius: 1cqw; background: var(--i-bg); margin-bottom: 1.4cqw; }
   .p-line.short { width: 62%; }
   .p-chips { display: flex; gap: 1.4cqw; margin-top: 2.4cqw; }
-  .p-chips span { font-size: 2.1cqw; color: var(--ink-soft); background: var(--i-bg); padding: .8cqw 1.8cqw; border-radius: .8cqw; white-space: nowrap; }
+  .p-chips span { font-size: 2.1cqw; color: var(--violet); background: var(--i-bg); padding: .8cqw 1.8cqw; border-radius: .8cqw; white-space: nowrap; }
   .place {
-    right: 2%; top: 71%; width: 50%; display: flex; align-items: center; gap: 2.6cqw; padding: 2.6cqw 3cqw;
-    transform: rotate(3deg); background: var(--bg); border: 1px solid var(--line); border-radius: 2cqw;
-    box-shadow: 0 2cqw 5cqw rgba(70, 50, 100, .12);
+    right: 2%; top: 70%; width: 50%; display: flex; align-items: center; gap: 2.6cqw; padding: 2.6cqw 3cqw;
+    transform: rotate(3deg); background: var(--bg); border: 1px solid var(--line); border-radius: 2.4cqw; box-shadow: 0 2cqw 5cqw rgba(70, 50, 140, .16);
   }
-  .pl-icon { width: 9cqw; height: 9cqw; border-radius: 50%; background: var(--i-bg); display: grid; place-items: center; flex: 0 0 auto; }
-  .pl-icon svg { width: 4.4cqw; fill: none; stroke: var(--accent); stroke-width: 1.6; }
+  .pl-icon { width: 9cqw; height: 9cqw; border-radius: 50%; background: var(--grad); display: grid; place-items: center; flex: 0 0 auto; }
+  .pl-icon svg { width: 4.4cqw; fill: none; stroke: #fff; stroke-width: 1.8; }
   .pl-text b { display: block; font-size: 3.2cqw; letter-spacing: -.15cqw; line-height: 1.3; }
   .pl-text small { display: block; font-size: 2.4cqw; color: var(--ink-soft); line-height: 1.4; }
-  .pl-check { margin-left: auto; font-size: 3.6cqw; color: var(--i-leaf); }
-  .note {
-    left: 1%; bottom: 3%; padding: 2.8cqw 3.6cqw; background: var(--i-note); border-radius: 1.4cqw;
-    font-size: 2.7cqw; line-height: 1.6; color: var(--ink);
-  }
-  .illus figcaption { text-align: right; font-size: 12px; letter-spacing: 3px; color: var(--ink-faint); margin-top: 10px; padding-right: 6%; }
+  .pl-check { margin-left: auto; font-size: 3.6cqw; color: var(--violet); }
+  .note { left: 1%; bottom: 3%; padding: 2.8cqw 3.6cqw; background: var(--i-note); border-radius: 1.6cqw; font-size: 2.7cqw; line-height: 1.6; color: var(--ink); }
+  .illus figcaption { text-align: right; font-size: 13px; color: var(--ink-faint); margin-top: 8px; padding-right: 6%; }
+
+  /* 바로가기 아이콘 (지니맵과 같은 원형 아이콘) */
+  .quick { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 28px 0 8px; }
+  .quick a { display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; font-size: 15px; font-weight: 500; color: var(--ink); }
+  .quick .ic { width: 76px; height: 76px; border-radius: 50%; border: 1.5px solid var(--line); background: var(--bg); display: grid; place-items: center; }
+  .quick .ic svg { width: 32px; height: 32px; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .quick a:first-child .ic { background: var(--grad); border-color: transparent; box-shadow: 0 10px 22px rgba(91, 80, 230, .3); }
+  .quick a:first-child .ic svg { stroke: #fff; }
+  .quick a:first-child { font-weight: 700; }
+  @media (max-width: 560px) { .quick { gap: 6px; } .quick .ic { width: 58px; height: 58px; } .quick .ic svg { width: 26px; height: 26px; } .quick a { font-size: 13px; } }
 
   /* 섹션 공통 */
-  section { padding: 96px 0; scroll-margin-top: 68px; }
-  section.cream { background: var(--cream); }
-  .head { margin-bottom: 44px; max-width: 640px; }
-  .head h2 { font-size: clamp(26px, 3.8vw, 34px); font-weight: 700; letter-spacing: -1.2px; margin-bottom: 14px; }
+  section { padding: 88px 0; scroll-margin-top: 72px; }
+  section.soft { background: var(--soft); }
+  .head { margin-bottom: 40px; max-width: 680px; }
+  .head h2 { font-size: clamp(26px, 3.6vw, 34px); margin-bottom: 14px; }
   .head p { color: var(--ink-soft); }
-  @media (max-width: 720px) { section { padding: 72px 0; } }
+  @media (max-width: 720px) { section { padding: 64px 0; } }
 
   /* 카드 */
   .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .card { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 32px 30px; }
-  .cream .card { background: var(--bg); }
-  .card .top-line { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
-  .card .top-line svg { width: 30px; height: 30px; stroke: var(--accent); fill: none; stroke-width: 1.6; flex: 0 0 auto; }
-  .card h3 { font-size: 21px; font-weight: 700; letter-spacing: -.6px; margin-bottom: 10px; }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; padding: 30px 28px; box-shadow: var(--shadow); }
+  .card .top-line { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .chip-ic { width: 46px; height: 46px; border-radius: 14px; background: var(--lav); display: grid; place-items: center; flex: 0 0 auto; }
+  .chip-ic svg { width: 24px; height: 24px; stroke: var(--violet); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .card h3 { font-size: 20px; margin-bottom: 8px; }
   .card p { color: var(--ink-soft); font-size: 16px; }
   @media (max-width: 760px) { .grid-2 { grid-template-columns: 1fr; } }
 
+  .story-top { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-bottom: 40px; }
+  .story-top .head { margin-bottom: 0; }
+  .profile .who { display: flex; align-items: baseline; gap: 10px; margin-bottom: 2px; }
+  .profile .who strong { font-family: "Noto Serif KR", serif; font-size: 25px; }
+  .profile .who .en { font-size: 18px; color: var(--violet); }
+  .profile .tagline { font-size: 14px; color: var(--violet); font-weight: 700; margin-bottom: 14px; }
+  .rows { list-style: none; padding: 0; }
+  .rows li { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 15.5px; }
+  .rows li b { font-weight: 700; }
+  .rows li span { color: var(--ink-soft); }
+  @media (max-width: 860px) { .story-top { grid-template-columns: 1fr; gap: 24px; } }
+
   /* 해본 일 */
   .work { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-  .tasks { list-style: none; margin: 0; padding: 0; counter-reset: t; }
-  .tasks li {
-    counter-increment: t; display: grid; grid-template-columns: 38px 1fr; padding: 15px 0;
-    border-top: 1px solid var(--line); font-size: 16px;
-  }
+  .tasks { list-style: none; padding: 0; counter-reset: t; }
+  .tasks li { counter-increment: t; display: grid; grid-template-columns: 44px 1fr; padding: 15px 0; border-top: 1px solid var(--line); font-size: 16.5px; }
   .tasks li:last-child { border-bottom: 1px solid var(--line); }
-  .tasks li::before { content: counter(t, decimal-leading-zero); color: var(--accent); font-size: 13px; font-weight: 600; padding-top: 3px; }
-  .quote { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 36px 32px; }
-  .quote .mark { font-size: 46px; line-height: 1; color: var(--accent); font-weight: 800; margin-bottom: 6px; }
-  .quote blockquote { margin: 0 0 18px; font-size: 21px; font-weight: 600; letter-spacing: -.6px; line-height: 1.55; }
+  .tasks li::before { content: counter(t, decimal-leading-zero); font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 20px; color: var(--violet); line-height: 1.4; }
+  .quote .mark-q { font-family: "Cormorant Garamond", serif; font-size: 64px; line-height: .8; color: var(--violet); }
+  .quote blockquote { margin: 0 0 16px; font-family: "Noto Serif KR", serif; font-size: 21px; font-weight: 700; line-height: 1.55; }
   .quote cite { font-style: normal; font-size: 14px; color: var(--ink-soft); }
-  .quote .note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-faint); }
+  .quote .fine { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-faint); }
   @media (max-width: 860px) { .work { grid-template-columns: 1fr; } }
 
-  /* 서비스 */
-  .svc-list { border-top: 1px solid var(--line); }
-  .svc { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 30px 0; border-bottom: 1px solid var(--line); }
-  .svc h3 { font-size: 21px; font-weight: 700; letter-spacing: -.6px; }
-  .svc .label { display: block; margin-top: 6px; }
-  .svc p { color: var(--ink-soft); font-size: 16px; }
-  .svc-note { margin-top: 22px; font-size: 14px; color: var(--ink-faint); }
-  @media (max-width: 720px) { .svc { grid-template-columns: 1fr; gap: 10px; } }
+  /* AI 검색 */
+  .ai-box { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: start; }
+  .ai-box .card p + p { margin-top: 10px; }
+  .ai-box .fine { font-size: 13.5px; color: var(--ink-faint); margin-top: 16px; }
+  .ai-q { list-style: none; padding: 0; margin-top: 12px; }
+  .ai-q li { font-size: 16px; padding: 14px 18px; margin-top: 10px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); }
+  .ai-q li::before { content: "Q. "; font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 19px; color: var(--violet); }
+  @media (max-width: 860px) { .ai-box { grid-template-columns: 1fr; } }
 
-  /* 원칙 (보라색) */
-  .principles { background: var(--accent-deep); color: #fff; }
-  .principles .eyebrow { color: var(--on-accent-soft); }
+  /* 할 수 있는 일 */
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .svc-grid .no { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 34px; color: var(--violet); line-height: 1; margin-bottom: 14px; display: block; }
+  .svc-grid .label { display: block; margin-bottom: 8px; }
+  .svc-note { margin-top: 24px; font-size: 15px; color: var(--ink-soft); }
+  .svc-note a { color: var(--violet); font-weight: 700; }
+  @media (max-width: 860px) { .svc-grid { grid-template-columns: 1fr; } }
+
+  /* 원칙 (진한 보라) */
+  .principles { background: var(--grad-deep); color: #fff; }
+  .principles .eyebrow { color: #cfc4ff; }
   .principles .head h2 { color: #fff; }
-  .steps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--on-accent-line); }
-  .steps li { display: grid; grid-template-columns: 56px 1fr; padding: 26px 0; border-bottom: 1px solid var(--on-accent-line); }
-  .steps .n { font-size: 14px; color: var(--on-accent-soft); padding-top: 3px; }
-  .steps h3 { font-size: 20px; font-weight: 700; letter-spacing: -.5px; margin-bottom: 6px; color: #fff; }
-  .steps p { color: var(--on-accent-soft); font-size: 16px; }
+  .steps { list-style: none; padding: 0; border-top: 1px solid var(--on-dark-line); }
+  .steps li { display: grid; grid-template-columns: 64px 1fr; padding: 24px 0; border-bottom: 1px solid var(--on-dark-line); }
+  .steps .n { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 26px; color: var(--gold); line-height: 1.2; }
+  .steps h3 { font-size: 20px; margin-bottom: 6px; color: #fff; }
+  .steps p { color: var(--on-dark-soft); font-size: 16px; }
 
   /* 블로그 */
-  .blog-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; max-width: 760px; }
-  .blog-card h3 { font-size: 24px; letter-spacing: -.8px; margin: 8px 0 4px; }
-  .blog-card .sub { color: var(--accent); font-weight: 600; font-size: 14.5px; margin-bottom: 12px; }
-  .blog-card svg { width: 64px; height: 64px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+  .blog-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; max-width: 780px; }
+  .blog-card h3 { font-size: 24px; margin: 6px 0 4px; }
+  .blog-card .sub { color: var(--violet); font-weight: 700; font-size: 14.5px; margin-bottom: 10px; }
+  .blog-card svg { width: 64px; height: 64px; stroke: var(--violet); fill: none; stroke-width: 1.3; }
   @media (max-width: 560px) { .blog-card { grid-template-columns: 1fr; } .blog-card svg { display: none; } }
 
-  footer { border-top: 1px solid var(--line); padding: 34px 0 40px; font-size: 14px; color: var(--ink-faint); }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center; }
-  footer .logo { font-size: 17px; color: var(--ink); }
-  footer .logo svg { width: 18px; height: 18px; }
+  /* 마지막 안내 */
+  .cta-band { background: var(--grad); color: #fff; border-radius: 28px; padding: 48px 44px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+  .cta-band .en { font-size: 20px; color: #fff; opacity: .85; display: block; margin-bottom: 6px; }
+  .cta-band h2 { font-size: clamp(24px, 3.2vw, 30px); color: #fff; }
+  .cta-band p { color: var(--on-dark-soft); margin-top: 8px; }
+  .cta-band .btn { background: #fff; color: #4b3bb5; box-shadow: none; }
+  .cta-band .btn.line { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.7); }
+  @media (max-width: 560px) { .cta-band { padding: 36px 24px; } }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0 44px; font-size: 14px; color: var(--ink-soft); }
+  footer .wrap { display: grid; grid-template-columns: auto 1fr; gap: 16px 40px; align-items: start; }
+  footer .logo .en { font-size: 21px; }
+  footer .biz { line-height: 1.9; }
+  footer .biz b { color: var(--ink); font-weight: 700; }
+  footer .copy { grid-column: 1 / -1; color: var(--ink-faint); font-size: 13px; }
+  @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<!-- 마케팅지니 로고 마크: 말풍선(고객의 이야기) + 반짝임(지니의 마법) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark" viewBox="0 0 32 32">
-    <rect style="fill:var(--accent)" x="2" y="3" width="28" height="22" rx="7"/>
-    <path style="fill:var(--accent)" d="M7 22 5.5 30 15 24Z"/>
-    <path style="fill:var(--bg)" d="M15 6.5c.5 4.3 2.2 6 6.5 7.5-4.3 1.5-6 3.2-6.5 7.5-.5-4.3-2.2-6-6.5-7.5 4.3-1.5 6-3.2 6.5-7.5Z"/>
-    <path style="fill:var(--bg)" d="M24 5.8c.2 1.4.8 2 2.2 2.2-1.4.2-2 .8-2.2 2.2-.2-1.4-.8-2-2.2-2.2 1.4-.2 2-.8 2.2-2.2Z"/>
-  </symbol>
-</svg>
-
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="마케팅지니 처음으로">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#mark"/></svg>
-      <span><span class="w1">마케팅</span><span class="w2">지니</span></span>
+      <img class="mark" src="logo.png" alt="" width="42" height="42">
+      <span><span class="en">Marketing Jini</span><b>마케팅지니</b></span>
     </a>
     <nav>
       <a href="#story">소개</a>
       <a href="#work">해본 일</a>
-      <a href="#blogs">작업 기록</a>
-      <a class="outline" href="#services">할 수 있는 일 ↗</a>
+      <a href="#ai">AI 검색</a>
+      <a href="service/">상품·가격</a>
+      <a class="cta" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡 상담 ↗</a>
     </nav>
   </div>
 </header>
@@ -249,103 +265,101 @@
 <main id="top">
 <section class="hero">
   <div class="wrap">
-    <div>
-      <span class="eyebrow">현장을 아는 온라인 홍보 파트너</span>
-      <h1>현장을 아는 사람이<br>만드는 <em>온라인 홍보.</em></h1>
-      <p class="strong">주야간보호센터·지역 소상공인을 위한<br>웹페이지 제작과 블로그·플레이스 정비.</p>
-      <p class="soft">보호자가 무엇을 궁금해하는지 알기에,<br>그 답을 센터와 가게의 온라인에 담습니다.</p>
-      <a class="btn" href="#services">할 수 있는 일 보기 <span>↓</span></a>
+    <div class="hero-panel">
+      <div>
+        <span class="eyebrow en">Marketing Jini · Suwon · Hwaseong · Dongtan</span>
+        <h1>수원·화성·동탄<br>주야간보호센터를 위한<br><em>온라인 홍보.</em></h1>
+        <p class="strong">센터를 직접 찾아가 돕는, 보호자인 마케터.<br>블로그·네이버 플레이스·당근·안내 웹페이지를 함께 정리합니다.</p>
+        <p class="soft">보호자가 무엇을 궁금해하는지 알기에, 그 답을 센터의 온라인에 담습니다.</p>
+        <div class="btns">
+          <a class="btn" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 무료 진단 신청 <span>↗</span></a>
+          <a class="btn ghost" href="service/">상품·가격 보기 <span>↗</span></a>
+        </div>
+        <span class="area">주야간보호센터 중심 · 방문요양·요양원도 상담 가능</span>
+      </div>
+
+      <figure class="illus" aria-label="마케팅지니가 만드는 센터 블로그 글과 지역 정보를 표현한 그림">
+        <div class="stage">
+          <div class="arch"></div>
+          <div class="ring"></div>
+          <p class="i-tag">좋은 이야기가, 필요한 곳에.</p>
+          <svg class="i-spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1 9.5 4.5 13.5 18 18-13.5 4.5-17 8.5-18 18-1-9.5-4.5-13.5-18-18C15.5 15.5 19 11.5 20 2Z"/></svg>
+          <div class="post">
+            <div class="p-head">
+              <span class="p-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.5 4.6 2 6.3 7.5 9-5.5 2.7-7 4.4-7.5 9-.5-4.6-2-6.3-7.5-9C10 9.3 11.5 7.6 12 3Z"/></svg></span>
+              <span>마케팅지니의 작업 노트</span>
+              <span class="p-dots">•••</span>
+            </div>
+            <svg class="p-pic" viewBox="0 0 300 130" aria-hidden="true">
+              <rect width="300" height="130" rx="8" style="fill:var(--i-beige)"/>
+              <circle cx="252" cy="30" r="17" style="fill:var(--i-sun)"/>
+              <path d="M44 130c-14-26-12-62 12-84 16 26 16 60 2 84Z" style="fill:var(--i-leaf)"/>
+              <path d="M232 130c6-30 26-50 50-54-4 28-22 48-46 54Z" style="fill:var(--i-leaf2)"/>
+              <path d="M112 130V78a38 38 0 0 1 76 0v52Z" style="fill:var(--i-house)"/>
+              <path d="M134 82l16-13 16 13v24h-32Z" style="fill:none;stroke:var(--violet);stroke-width:4;stroke-linejoin:round"/>
+            </svg>
+            <p class="p-title">보호자가 궁금한 것을<br>차근차근 담은 이야기</p>
+            <span class="p-line"></span><span class="p-line short"></span>
+            <div class="p-chips"><span>현장을 아는 콘텐츠</span><span>꾸준한 관리</span></div>
+          </div>
+          <div class="place">
+            <span class="pl-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+            <span class="pl-text"><b>우리 동네, 우리 센터</b><small>보호자가 찾는 정보를 한눈에</small></span>
+            <span class="pl-check">✓</span>
+          </div>
+          <p class="note">센터는 돌봄에 집중하세요.<br><b>온라인은 함께 정리할게요.</b></p>
+        </div>
+        <figcaption class="en">Web page · Blog · Place</figcaption>
+      </figure>
     </div>
 
-    <!-- 첫 화면 일러스트: 그림 파일 없이 코드로 그려서 index.html 하나만 올리면 됩니다 -->
-    <figure class="illus" aria-label="마케팅지니가 만드는 블로그 글과 지역 정보를 표현한 그림">
-      <div class="stage">
-        <div class="arch"></div>
-        <div class="ring"></div>
-        <p class="i-tag">좋은 이야기가, 필요한 곳에.</p>
-        <svg class="i-spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1 9.5 4.5 13.5 18 18-13.5 4.5-17 8.5-18 18-1-9.5-4.5-13.5-18-18C15.5 15.5 19 11.5 20 2Z"/></svg>
-
-        <div class="post">
-          <div class="p-head">
-            <span class="p-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.5 4.6 2 6.3 7.5 9-5.5 2.7-7 4.4-7.5 9-.5-4.6-2-6.3-7.5-9C10 9.3 11.5 7.6 12 3Z"/></svg></span>
-            <span>마케팅지니의 작업 노트</span>
-            <span class="p-dots">•••</span>
-          </div>
-          <svg class="p-pic" viewBox="0 0 300 130" aria-hidden="true">
-            <rect width="300" height="130" rx="8" style="fill:var(--i-beige)"/>
-            <circle cx="252" cy="30" r="17" style="fill:var(--i-sun)"/>
-            <path d="M44 130c-14-26-12-62 12-84 16 26 16 60 2 84Z" style="fill:var(--i-leaf)"/>
-            <path d="M232 130c6-30 26-50 50-54-4 28-22 48-46 54Z" style="fill:var(--i-leaf2)"/>
-            <path d="M112 130V78a38 38 0 0 1 76 0v52Z" style="fill:var(--i-house)"/>
-            <path d="M134 82l16-13 16 13v24h-32Z" style="fill:none;stroke:var(--accent);stroke-width:4;stroke-linejoin:round"/>
-          </svg>
-          <p class="p-title">보호자가 궁금한 것을<br>차근차근 담은 이야기</p>
-          <span class="p-line"></span><span class="p-line short"></span>
-          <div class="p-chips"><span>현장을 아는 콘텐츠</span><span>꾸준한 관리</span></div>
-        </div>
-
-        <div class="place">
-          <span class="pl-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
-          <span class="pl-text"><b>우리 동네, 우리 가게</b><small>필요한 정보를 한눈에</small></span>
-          <span class="pl-check">✓</span>
-        </div>
-
-        <p class="note">사장님은 운영에 집중하세요.<br><b>온라인은 함께 정리할게요.</b></p>
-      </div>
-      <figcaption>WEB PAGE · BLOG · PLACE</figcaption>
-    </figure>
+    <nav class="quick" aria-label="함께 정리하는 곳">
+      <a href="#services"><span class="ic"><svg viewBox="0 0 32 32"><rect x="7" y="5" width="18" height="22" rx="3"/><path d="M11 12h10M11 17h10M11 22h6"/></svg></span>블로그</a>
+      <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#3fa37a"><path d="M16 28s-8.5-7.8-8.5-14.3a8.5 8.5 0 0 1 17 0C24.5 20.2 16 28 16 28Z"/><circle cx="16" cy="13.5" r="3.2"/></svg></span>플레이스</a>
+      <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#e8823a"><path d="M16 5c5.5 0 9.5 4 9.5 9.5 0 6.5-6 10.5-9.5 12.5-3.5-2-9.5-6-9.5-12.5C6.5 9 10.5 5 16 5Z"/><path d="M12.5 15.5 15 18l4.5-5"/></svg></span>당근</a>
+      <a href="#services"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#5566e8"><rect x="10" y="4" width="12" height="24" rx="3"/><path d="M14.5 24h3"/></svg></span>웹페이지</a>
+      <a href="#ai"><span class="ic"><svg viewBox="0 0 32 32" style="stroke:#b8862b"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7"/><path d="M14 10.5c.3 2 1.2 3 3.2 3.5-2 .5-2.9 1.5-3.2 3.5-.3-2-1.2-3-3.2-3.5 2-.5 2.9-1.5 3.2-3.5Z"/></svg></span>AI 검색</a>
+    </nav>
   </div>
 </section>
 
-<section class="cream" id="story">
+<section class="soft" id="story">
   <div class="wrap">
     <div class="story-top">
       <div class="head">
-        <span class="eyebrow">저는 이런 사람이에요</span>
-        <h2>사람을 먼저 이해하고,<br>고객의 궁금증부터 답합니다.</h2>
-        <p>제 이력은 한 줄로 정리되지 않습니다. 그래서 오히려 고객의 입장을 여러 방향에서 볼 수 있습니다.</p>
+        <span class="eyebrow en">About Jini</span>
+        <h2>사람을 먼저 이해하고,<br>보호자의 궁금증부터 답합니다.</h2>
+        <p>제 이력은 한 줄로 정리되지 않습니다. 그래서 오히려 센터와 보호자의 입장을 여러 방향에서 볼 수 있습니다.</p>
       </div>
-      <aside class="profile">
-        <div class="who"><strong>마케팅지니</strong></div>
+      <aside class="card profile">
+        <div class="who"><strong>마케팅지니</strong><span class="en">Marketing Jini</span></div>
         <p class="tagline">돌봄 경험 × 온라인 마케팅 × AI</p>
         <ul class="rows">
           <li><b>가족 돌봄</b><span>치매 어머니를 함께 사는 집에서 돌보는 보호자</span></li>
           <li><b>현장 경력</b><span>주야간보호센터 요양보호사 약 1년</span></li>
           <li><b>온라인 운영</b><span>주야간보호센터 블로그·네이버 플레이스 직접 운영</span></li>
-          <li><b>AI 활용</b><span>AI 도구를 꾸준히 공부하고 실무에 활용</span></li>
+          <li><b>AI 활용</b><span>AI로 센터 안내 웹페이지와 콘텐츠 제작</span></li>
         </ul>
       </aside>
     </div>
     <div class="grid-2">
       <div class="card">
-        <div class="top-line">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27s-10-6.2-10-13.2A5.6 5.6 0 0 1 16 10a5.6 5.6 0 0 1 10 3.8C26 20.8 16 27 16 27Z"/></svg>
-          <span class="label">FAMILY CAREGIVER</span>
-        </div>
+        <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><path d="M16 27s-10-6.2-10-13.2A5.6 5.6 0 0 1 16 10a5.6 5.6 0 0 1 10 3.8C26 20.8 16 27 16 27Z"/></svg></span><span class="label">FAMILY CAREGIVER</span></div>
         <h3>처음 겪는 돌봄의 막막함을 압니다</h3>
         <p>어머니를 돌보며 낯선 제도와 용어 앞에서 막막했던 순간이 많았습니다. 그 경험이 제가 정보를 쉽게 정리하려는 이유입니다.</p>
       </div>
       <div class="card">
-        <div class="top-line">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 15 16 6l11 9"/><path d="M8 13v13h16V13"/><path d="M14 26v-6h4v6"/></svg>
-          <span class="label">CARE CENTER</span>
-        </div>
+        <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><path d="M5 15 16 6l11 9"/><path d="M8 13v13h16V13"/><path d="M14 26v-6h4v6"/></svg></span><span class="label">CARE CENTER</span></div>
         <h3>센터 안의 하루를 직접 겪었습니다</h3>
         <p>주야간보호센터에서 일하며 프로그램, 식사, 송영처럼 보호자가 꼭 묻는 것들이 실제로 어떻게 운영되는지 봤습니다.</p>
       </div>
       <div class="card">
-        <div class="top-line">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M10 17l4-4 3 3 5-5"/></svg>
-          <span class="label">ONLINE MANAGER</span>
-        </div>
+        <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="16" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M10 17l4-4 3 3 5-5"/></svg></span><span class="label">ONLINE MANAGER</span></div>
         <h3>블로그와 플레이스를 직접 키워봤습니다</h3>
         <p>센터의 온라인 채널을 처음부터 맡아 꾸준히 운영했고, 직원분께 운영 방법도 알려드렸습니다.</p>
       </div>
       <div class="card">
-        <div class="top-line">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9c-3-2.2-7-2.6-11-1.5v17c4-1.1 8-.7 11 1.5 3-2.2 7-2.6 11-1.5v-17C23 6.4 19 6.8 16 9Z"/><path d="M16 9v17"/></svg>
-          <span class="label">KEEP LEARNING</span>
-        </div>
+        <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><path d="M16 9c-3-2.2-7-2.6-11-1.5v17c4-1.1 8-.7 11 1.5 3-2.2 7-2.6 11-1.5v-17C23 6.4 19 6.8 16 9Z"/><path d="M16 9v17"/></svg></span><span class="label">KEEP LEARNING</span></div>
         <h3>AI를 꾸준히 공부합니다</h3>
         <p>AI로 웹페이지와 콘텐츠를 만드는 방법을 계속 익히고, 배운 것은 바로 실제 작업에 적용합니다.</p>
       </div>
@@ -356,9 +370,9 @@
 <section id="work">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">실제로 해본 일</span>
+      <span class="eyebrow en">What I've done</span>
       <h2>블로그와 플레이스 운영,<br>처음부터 끝까지 직접 해봤습니다.</h2>
-      <p>주야간보호센터의 온라인 운영부터 음식점 체험단 후기 작성까지, 블로그 일을 여러 입장에서 직접 해봤습니다.</p>
+      <p>주야간보호센터의 블로그와 네이버 플레이스를 처음부터 맡아, 1년 넘게 직접 운영했습니다.</p>
     </div>
     <div class="work">
       <ol class="tasks">
@@ -369,57 +383,83 @@
         <li>검색 키워드 선정 · 노출 관리</li>
         <li>센터 직원 대상 블로그 운영 교육</li>
         <li>방문자 · 검색 유입 · 문의 흐름 확인</li>
-        <li>음식점 블로그 체험단 25곳 참여 · 맛집 후기 50여 편 작성</li>
       </ol>
-      <div class="quote">
-        <div class="mark">“</div>
+      <div class="card quote">
+        <div class="mark-q">“</div>
         <blockquote>블로그 글을 올린 날에는 전화 문의가 더 많이 들어왔어요.</blockquote>
         <cite>— 운영을 맡았던 센터 관계자의 이야기</cite>
-        <p class="note">운영 기간 동안 방문자·상담 문의·입소자가 늘어난 것을 경험했습니다. 다만 정확한 수치는 기록하지 못했고, 모두 블로그 덕분이라고 단정하지 않습니다.</p>
+        <p class="fine">운영 기간 동안 방문자·상담 문의·입소자가 늘어난 것을 경험했습니다. 다만 정확한 수치는 기록하지 못했고, 모두 블로그 덕분이라고 단정하지 않습니다.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cream" id="services">
+<section class="soft" id="ai">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">함께 할 수 있는 일</span>
-      <h2>만들어 드리고,<br>직접 운영하실 수 있게 알려드립니다.</h2>
-      <p>주야간보호센터를 중심으로, 지역 소상공인까지 넓혀가고 있습니다.</p>
+      <span class="eyebrow en">AI search</span>
+      <h2>네이버 블로그만으로는<br>ChatGPT에 나오기 어렵습니다.</h2>
+      <p>네이버 블로그는 ChatGPT·Claude 같은 AI가 글을 가져가지 못하도록 막아 두었습니다(2026년 11월 확인). 보호자가 AI에게 우리 동네 센터를 물었을 때 정확한 정보가 나오려면, 센터 이름으로 된 안내 웹페이지가 함께 있어야 합니다.</p>
     </div>
-    <div class="svc-list">
-      <div class="svc">
-        <div><h3>안내 웹페이지 제작</h3><span class="label">WEB PAGE</span></div>
-        <p>센터·가게 소개, 프로그램, 시설, 오시는 길, 전화 연결까지 한 장에 담은 모바일 페이지를 AI로 빠르게 만들고 꼼꼼히 검수합니다. 네이버 플레이스에 연결해 쓰기 좋습니다.</p>
+    <div class="ai-box">
+      <div class="card">
+        <div class="top-line"><span class="chip-ic"><svg viewBox="0 0 32 32"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7"/><path d="M14 10.5c.3 2 1.2 3 3.2 3.5-2 .5-2.9 1.5-3.2 3.5-.3-2-1.2-3-3.2-3.5 2-.5 2.9-1.5 3.2-3.5Z"/></svg></span><span class="label">FREE CHECK</span></div>
+        <h3>무료 진단 · AI 추천 확인</h3>
+        <p>ChatGPT·제미나이·네이버 AI에 보호자가 물을 만한 질문을 직접 넣어 보고, 우리 센터가 나오는지 화면으로 보여드립니다.</p>
+        <p>플레이스·블로그에서 빠진 정보와 고칠 순서도 함께 정리해 드립니다.</p>
+        <p class="fine">AI 추천이나 검색 순위는 약속하지 않습니다. 정확한 정보가 보이도록 정리합니다.</p>
+        <a class="btn" style="margin-top:18px" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 무료 진단 신청 <span>↗</span></a>
       </div>
-      <div class="svc">
-        <div><h3>블로그·플레이스 정비</h3><span class="label">BLOG &amp; PLACE</span></div>
-        <p>홈페이지형 블로그 메뉴, 카테고리, 플레이스 소개 문구와 사진 배치를 고객이 보는 순서에 맞춰 정리합니다.</p>
-      </div>
-      <div class="svc">
-        <div><h3>AI 콘텐츠 시스템</h3><span class="label">AI SYSTEM</span></div>
-        <p>센터 사진과 활동 내용만 있으면 블로그 글과 플레이스 소식을 쉽게 만들 수 있도록 도구와 순서를 만들어 드리고 사용법을 알려드립니다.</p>
-      </div>
-      <div class="svc">
-        <div><h3>AI 실습 모임</h3><span class="label">SMALL CLASS</span></div>
-        <p>4~6명 소규모로 모여, 내 가게 소개글과 홍보 이미지를 직접 완성해 가는 실습형 모임을 준비하고 있습니다.</p>
+      <div>
+        <p class="label">이런 질문으로 확인합니다</p>
+        <ul class="ai-q">
+          <li>수원 권선구 주간보호센터 추천해 줘</li>
+          <li>근처에 송영 되는 주간보호센터 있어?</li>
+          <li>장기요양 4등급 주간보호 비용은 얼마야?</li>
+        </ul>
       </div>
     </div>
-    <p class="svc-note">서비스 범위와 비용은 상담할 때 미리 문서로 안내해 드립니다.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow en">Services</span>
+      <h2>센터는 사진만 보내 주세요.<br>보호자가 찾는 길은 함께 정리합니다.</h2>
+      <p>주야간보호센터 중심으로, 방문요양·요양원도 상담 가능합니다.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card">
+        <span class="no">01</span><span class="label">BLOG &amp; PLACE</span>
+        <h3>블로그·플레이스 정비</h3>
+        <p>블로그 메뉴·카테고리·소개글과 플레이스 소개 문구·사진 순서·기본 정보를 보호자가 보는 순서에 맞춰 정리하고, 블로그와 플레이스를 연결합니다.</p>
+      </div>
+      <div class="card">
+        <span class="no">02</span><span class="label">WEB PAGE</span>
+        <h3>안내 웹페이지 제작</h3>
+        <p>프로그램·하루 일과·이용 비용·송영·오시는 길·전화 연결을 한 장에 담은 휴대폰용 페이지를 만들어, 플레이스 ‘홈페이지’ 칸에 연결합니다. AI 검색에서도 센터 정보를 읽을 수 있게 정리합니다.</p>
+      </div>
+      <div class="card">
+        <span class="no">03</span><span class="label">MONTHLY</span>
+        <h3>월간 관리</h3>
+        <p>밴드나 카톡방에 평소처럼 올린 사진과 한 줄 설명을 받아, 블로그 글·플레이스 소식·당근 소식으로 정리해 올립니다. 어르신 얼굴은 모자이크하고, 센터가 확인한 뒤에 올립니다.</p>
+      </div>
+    </div>
+    <p class="svc-note"><a href="service/">상품 구성과 가격 보기 ↗</a> · 범위와 비용은 시작 전에 문서로 안내해 드립니다.</p>
   </div>
 </section>
 
 <section class="principles" id="principles">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">일하는 원칙</span>
+      <span class="eyebrow en">Principles</span>
       <h2>신뢰는 말보다<br>행동으로 쌓습니다.</h2>
     </div>
     <ol class="steps">
       <li><span class="n">01</span><div><h3>확인된 것만 말합니다</h3><p>검색 상위 노출이나 문의 증가를 약속하지 않습니다. 실제로 확인된 변화만 사례로 씁니다.</p></div></li>
       <li><span class="n">02</span><div><h3>범위와 비용을 먼저 정합니다</h3><p>무엇을 하고, 몇 번 수정하고, 얼마인지 시작 전에 정리해 드립니다.</p></div></li>
-      <li><span class="n">03</span><div><h3>사진·정보는 동의한 것만 씁니다</h3><p>어르신과 고객의 사진, 개인정보는 동의받은 범위 안에서만 사용합니다.</p></div></li>
+      <li><span class="n">03</span><div><h3>사진·정보는 동의한 것만 씁니다</h3><p>어르신과 보호자의 사진, 개인정보는 동의받은 범위 안에서만 쓰고 얼굴은 모자이크합니다.</p></div></li>
     </ol>
   </div>
 </section>
@@ -427,17 +467,33 @@
 <section id="blogs">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">작업 기록</span>
+      <span class="eyebrow en">Work notes</span>
       <h2>작업하는 과정을<br>블로그에 기록합니다.</h2>
     </div>
     <div class="card blog-card">
       <div>
-        <span class="label">FOR DIRECTORS &amp; OWNERS</span>
+        <span class="label">FOR CENTER DIRECTORS</span>
         <h3>마케팅지니</h3>
-        <p class="sub">현장을 아는 지역 온라인 마케팅</p>
-        <p>센터·소상공인 웹페이지 제작, 블로그·플레이스 운영 노하우, AI 활용법을 실제 작업 기록과 함께 나누는 사업 블로그입니다.</p>
+        <p class="sub">고객의 시선으로 만드는 온라인 홍보</p>
+        <p>센터 웹페이지 제작, 블로그·플레이스 운영 노하우, AI 활용법을 실제 작업 기록과 함께 나누는 사업 블로그입니다.</p>
       </div>
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="8" width="44" height="48" rx="4"/><path d="M19 22h26M19 31h26M19 40h16"/></svg>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <span class="en">Free check</span>
+        <h2>우리 센터, AI에 물어보면 나올까요?</h2>
+        <p>무료 진단으로 지금 모습부터 함께 확인해 보세요.<br>전화가 편하시면 <a href="tel:010-5904-5300" style="color:#fff;font-weight:700">010-5904-5300</a></p>
+      </div>
+      <div class="btns">
+        <a class="btn" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카카오톡으로 상담하기 <span>↗</span></a>
+        <a class="btn line" href="service/">상품·가격 보기 <span>↗</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -446,11 +502,16 @@
 <footer>
   <div class="wrap">
     <span class="logo">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#mark"/></svg>
-      <span><span class="w1">마케팅</span><span class="w2">지니</span></span>
+      <img class="mark" src="logo.png" alt="" width="42" height="42">
+      <span class="en">Marketing Jini</span>
     </span>
-    <span>사람을 먼저 이해하고, 필요한 정보를 정확하게 전합니다.</span>
-    <span>© 2026 마케팅지니</span>
+    <div class="biz">
+      <b>상호</b> 마케팅지니 · <b>대표</b> 허효진 · <b>사업자등록번호</b> 529-30-02199<br>
+      <b>사업장</b> 경기도 수원시 권선구<br>
+      <b>상담</b> <a href="https://pf.kakao.com/_rxeExeX" target="_blank" rel="noopener">카카오톡 채널 ‘마케팅지니’</a> · <b>전화</b> <a href="tel:010-5904-5300">010-5904-5300</a><br>
+      수원·화성·동탄은 직접 방문, 그 밖의 지역은 온라인으로 함께합니다. 학원·동네 가게 홍보도 상담은 가능해요.
+    </div>
+    <p class="copy">© 2026 마케팅지니 · Marketing Jini — 고객의 시선으로 만드는 온라인 홍보</p>
   </div>
 </footer>
 
