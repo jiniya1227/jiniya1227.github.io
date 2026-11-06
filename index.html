@@ -377,6 +377,11 @@
   .cta-band .btns { flex-direction: column; min-width: 280px; }
   .cta-band .btn { background: #fff; color: #3d2c8f; box-shadow: 0 10px 24px rgba(0, 0, 0, .18); font-size: 17px; padding: 18px 26px; justify-content: center; }
   .cta-band .btn.line { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.75); box-shadow: none; }
+  .cta-band .btn.kch { background: #fee500; color: #191600; gap: 8px; }
+  .cta-band .btn.kch svg { width: 22px; height: 22px; fill: #191600; flex: none; }
+  .cta-band .btn.kch span { font-size: 22px; line-height: 1; font-weight: 700; }
+  .cta-band .kch-note { display: block; max-width: 300px; font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,.82); text-align: center; margin: 2px auto 0; }
+  @media (max-width: 860px) { .cta-band .kch-note { max-width: none; } }
   @media (max-width: 860px) { .cta-band .btns { min-width: 0; width: 100%; } }
   @media (max-width: 560px) { .cta-band { padding: 40px 24px; } .cta-band::after { right: 22px; top: 20px; font-size: 32px; } .cta-band p { font-size: 16.5px; } }
 
@@ -869,7 +874,9 @@
       </div>
       <div class="btns">
         <a class="btn" href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 무료 진단 신청 <span>↗</span></a>
+        <a class="btn kch" href="https://pf.kakao.com/_rxeExeX/friend" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.8 0-8.5 3-8.5 6.7 0 2.4 1.6 4.5 4 5.7L6.8 20l4-2.5c.4 0 .8.1 1.2.1 4.8 0 8.5-3 8.5-6.8S16.8 4 12 4Z"/></svg>카톡 채널 추가하기 <span>+</span></a>
         <a class="btn line" href="service/">상품·가격 보기 <span>↗</span></a>
+        <small class="kch-note">채널을 추가해 두시면 새 작업 노트와 소식을 카톡으로 받아 보실 수 있어요.</small>
       </div>
     </div>
   </div>
@@ -885,7 +892,7 @@
     <div class="biz">
       <span class="bi"><b>상호</b> 마케팅지니</span><span class="sep"> · </span><span class="bi"><b>대표</b> 허효진</span><span class="sep"> · </span><span class="bi"><b>사업자등록번호</b> 529-30-02199</span><br>
       <span class="bi"><b>사업장</b> 경기도 수원시 권선구</span><br>
-      <span class="bi"><b>상담</b> <a href="https://pf.kakao.com/_rxeExeX" target="_blank" rel="noopener">카카오톡 채널 ‘마케팅지니’</a></span><span class="sep"> · </span><span class="bi"><b>전화</b> <a href="tel:010-5904-5300">010-5904-5300</a></span><br>
+      <span class="bi"><b>상담</b> <a href="https://pf.kakao.com/_rxeExeX" target="_blank" rel="noopener">카카오톡 채널 ‘마케팅지니’</a> (<a href="https://pf.kakao.com/_rxeExeX/friend" target="_blank" rel="noopener">채널 추가</a>)</span><span class="sep"> · </span><span class="bi"><b>전화</b> <a href="tel:010-5904-5300">010-5904-5300</a></span><br>
       <span class="more">수원·화성·용인은 직접 방문, 그 밖의 지역은 온라인으로 함께합니다. 학원·동네 가게 홍보도 상담은 가능해요.</span>
     </div>
     <p class="copy">© 2026 마케팅지니 · Marketing Jini — 고객의 시선으로 만드는 온라인 홍보</p>
