@@ -266,6 +266,28 @@
   /* 휴대폰 화면에서는 QR 숨김 (같은 휴대폰으로는 찍을 수 없으니) — PC·인쇄에는 그대로 */
   @media screen and (max-width: 680px) { .qr { display: none; } }
 
+  /* 화면에서 '월간 관리'와 '마케팅지니는' 칸을 눈에 띄게 (2026-11-06) — 인쇄 모양은 그대로 */
+  @media screen {
+    .m-wrap { margin-top: 40px; background: var(--tint); border-radius: 18px; padding: 26px 26px 22px; }
+    .m-wrap .m-head { margin-top: 0; }
+    .m-wrap .m-head h3 { font-size: clamp(22px, 3vw, 26px); }
+    .m-wrap .m-head span.m-one { display: inline-block; background: var(--bg); color: var(--ink); border-radius: 999px; padding: 4px 14px; font-weight: 500; }
+    .m-wrap .monthly div { background: var(--bg); border: 1px solid var(--line); border-top: 4px solid var(--accent); box-shadow: 0 10px 22px rgba(61, 44, 143, .08); }
+    .m-wrap .monthly .m-price { color: var(--accent); }
+    .m-wrap .fine { margin-top: 14px; }
+
+    .who { background: var(--tint); border-top: 4px solid var(--gold); }
+    .who h3 { font-size: clamp(24px, 3.4vw, 30px); }
+    .who ul { gap: 10px 14px; }
+    .who li { position: relative; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: 13px 16px 13px 44px; font-weight: 500; box-shadow: 0 6px 14px rgba(61, 44, 143, .06); }
+    .who li::before { content: "✦"; position: absolute; left: 16px; top: 50%; transform: translateY(-52%); color: var(--gold); font-size: 17px; }
+    .who li b { color: var(--accent); font-weight: 700; }
+  }
+  @media screen and (max-width: 680px) {
+    .m-wrap { margin: 34px -6px 0; padding: 22px 16px 18px; }
+    .who li { font-size: 16px; }
+  }
+
   /* A4 한 장으로 인쇄 */
   @page { size: A4; margin: 9mm; }
   @media print {
@@ -386,13 +408,15 @@
         <p>B 블로그·플레이스 정비 + C 홈페이지를 한 번에. 보호자가 플레이스에서 홈페이지·블로그를 거쳐 전화까지 오는 길을 함께 정리합니다.</p>
       </li>
     </ol>
-    <div class="m-head"><h3>월간 관리</h3><span>1건 = 블로그 글 1편 + 플레이스 소식 + 당근 소식</span></div>
+    <div class="m-wrap">
+    <div class="m-head"><h3>월간 관리</h3><span class="m-one">1건 = 블로그 글 1편 + 플레이스 소식 + 당근 소식</span></div>
     <div class="monthly">
       <div><b>월 4건</b><span class="m-price">12만 원</span><p>주 1회 · 월간 보고</p></div>
       <div><b>월 8건</b><span class="m-price">20만 원</span><p>주 2회 · 월간 보고</p></div>
       <div><b>월 12건</b><span class="m-price">27만 원</span><p>주 3회 · 월간 보고</p></div>
     </div>
     <p class="fine">모든 가격은 부가세 10% 별도입니다. 작업 범위·수정 횟수·일정과 최종 금액은 상담 후 견적서로 먼저 안내해 드립니다.</p>
+    </div>
   </section>
 
   <section class="sec pad two">
@@ -431,10 +455,10 @@
   <section class="who">
     <div><span class="en">Who we are</span><h3>마케팅지니는</h3></div>
     <ul>
-      <li>치매 어머니를 돌보는 가족 보호자</li>
-      <li>주야간보호센터 요양보호사 약 1년</li>
-      <li>센터 블로그·플레이스 1년 넘게 직접 운영</li>
-      <li>AI로 센터 홈페이지 제작</li>
+      <li>치매 어머니를 돌보는 <b>가족 보호자</b></li>
+      <li>주야간보호센터 <b>요양보호사 약 1년</b></li>
+      <li>센터 블로그·플레이스 <b>1년 넘게 직접 운영</b></li>
+      <li><b>AI로</b> 센터 홈페이지 제작</li>
     </ul>
   </section>
 
