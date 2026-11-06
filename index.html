@@ -533,6 +533,15 @@
   .faq-list details[open] { border-color: var(--line); box-shadow: var(--ev-2); }
   .faq-list summary::after { content: ""; flex: none; align-self: center; width: 9px; height: 9px; margin: 0 4px 4px auto; border-right: 2px solid var(--ink-faint); border-bottom: 2px solid var(--ink-faint); transform: rotate(45deg); transition: transform .15s var(--ease); }
   .faq-list details[open] summary::after { content: ""; margin-bottom: -4px; transform: rotate(-135deg); }
+  /* 질문 더 보기: 나머지 6개는 접어 둡니다 (AI 검색용 정보에는 12개 모두 그대로) */
+  .faq-more { margin-top: 12px; }
+  .faq-more > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: var(--fill); color: var(--text-strong); font-weight: 700; font-size: 15.5px; transition: background-color .15s var(--ease); }
+  .faq-more > summary::-webkit-details-marker { display: none; }
+  .faq-more > summary:hover { background: var(--line-heavy); }
+  .faq-more > summary span { color: var(--ink-faint); font-weight: 400; }
+  .faq-more > summary::after { content: ""; width: 7px; height: 7px; margin: 0 2px 4px 2px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .15s var(--ease); }
+  .faq-more[open] > summary { margin-bottom: 8px; }
+  .faq-more[open] > summary::after { margin: 4px 2px 0 2px; transform: rotate(-135deg); }
 
   /* Final CTA: 진한 보라 단색(그라데이션·별 없음), 32px 모서리 */
   .cta-band { border-radius: 32px; box-shadow: var(--ev-4); }
@@ -926,59 +935,64 @@
   <div class="wrap">
     <div class="head">
       <span class="eyebrow en">FAQ</span>
-      <h2>센터장님이 자주 묻는<br>질문 12가지.</h2>
+      <h2>센터장님이 자주 묻는 질문</h2>
       <p>궁금한 질문을 누르면 답이 열립니다. 더 궁금한 점은 카카오톡 채널로 편하게 물어봐 주세요.</p>
     </div>
     <div class="faq-list">
       <details>
-        <summary><span class="n en">01</span><span class="q">어떤 홍보를 도와주시나요?</span></summary>
-        <p>주야간보호센터의 네이버 블로그와 플레이스를 정리하고, 보호자가 휴대폰으로 보기 편한 센터 홈페이지를 만들어요. 월간 관리를 맡기시면 블로그 글과 플레이스·당근 소식도 작성해 드립니다.</p>
-      </details>
-      <details>
-        <summary><span class="n en">02</span><span class="q">수원·화성·용인 외 지역도 상담할 수 있나요?</span></summary>
-        <p>네. 수원·화성·용인은 직접 방문하고, 그 밖의 지역은 온라인으로 상담합니다. 방문요양기관과 요양원도 상담할 수 있어요.</p>
-      </details>
-      <details>
-        <summary><span class="n en">03</span><span class="q">홍보 비용은 얼마이고, 견적은 어떻게 받나요?</span></summary>
+        <summary><span class="n en">01</span><span class="q">홍보 비용은 얼마이고, 견적은 어떻게 받나요?</span></summary>
         <p>블로그·플레이스 정비는 30만 원, 센터 홈페이지 제작은 30만 원, 두 가지를 함께 진행하면 50만 원입니다. 부가세와 홈페이지 도메인 비용은 별도예요. 상담 후 작업 범위, 수정 횟수, 일정, 최종 금액을 견적서로 안내해 드립니다.</p>
       </details>
       <details>
-        <summary><span class="n en">04</span><span class="q">블로그나 네이버 플레이스가 없어도 시작할 수 있나요?</span></summary>
-        <p>네. 상담할 때 지금 운영 중인 채널이 있는지 알려 주세요. 아무것도 없다면 센터 상황을 듣고 무엇부터 준비하면 좋을지 함께 정해요.</p>
+        <summary><span class="n en">02</span><span class="q">한 번만 맡길 수 있나요, 매달 관리도 가능한가요?</span></summary>
+        <p>블로그·플레이스 정비나 홈페이지 제작은 한 번만 맡기실 수 있어요. 꾸준히 소식을 올리고 싶다면 월 4건·8건·12건 중에서 고르시면 됩니다. 1건은 블로그 글 1편과 플레이스·당근 소식으로 구성돼요.</p>
       </details>
       <details>
-        <summary><span class="n en">05</span><span class="q">기존 블로그와 플레이스에서 어떤 부분을 정리해 주시나요?</span></summary>
-        <p>블로그는 메뉴·카테고리·소개글을, 플레이스는 소개 문구·사진 순서·기본 정보를 살펴봐요. 기존 글은 이어갈 부분과 정리할 부분을 함께 정하고, 블로그와 플레이스도 연결해 드립니다.</p>
+        <summary><span class="n en">03</span><span class="q">무료 AI 검색 진단에서는 무엇을 확인해 주시나요?</span></summary>
+        <p>ChatGPT·제미나이·네이버 AI에 보호자가 물어볼 만한 질문을 넣어, 우리 센터가 답변에 나오는지 화면으로 보여드려요. 블로그와 플레이스에서 빠진 정보를 살펴보고, 보호자처럼 휴대폰으로 전화가 실제로 연결되는지도 눌러 봐요. 그다음 무엇부터 보완하면 좋을지 알려드립니다.</p>
+      </details>
+      <details>
+        <summary><span class="n en">04</span><span class="q">센터에서 준비해야 할 사진이나 자료가 있나요?</span></summary>
+        <p>센터 활동 사진과 활동 이름, 한 줄 설명이면 글을 시작할 수 있어요. 밴드나 카톡방에 평소처럼 올려 주시면, 글에 필요한 정보는 제가 추가로 여쭤볼게요.</p>
+      </details>
+      <details>
+        <summary><span class="n en">05</span><span class="q">어르신 얼굴이 나온 사진은 어떻게 처리하나요?</span></summary>
+        <p>사용에 동의받은 사진만 쓰고, 어르신 얼굴은 모자이크해요. 글과 사진은 센터에서 확인한 뒤 게시합니다.</p>
       </details>
       <details>
         <summary><span class="n en">06</span><span class="q">당근 홍보나 홈페이지 제작만 따로 맡길 수 있나요?</span></summary>
         <p>센터 홈페이지는 단독으로 제작할 수 있어요. 당근 소식은 월간 관리에 포함돼요. 당근만 원하시면 상담할 때 필요한 작업을 알려 주세요.</p>
       </details>
-      <details>
-        <summary><span class="n en">07</span><span class="q">센터에서 준비해야 할 사진이나 자료가 있나요?</span></summary>
-        <p>센터 활동 사진과 활동 이름, 한 줄 설명이면 글을 시작할 수 있어요. 밴드나 카톡방에 평소처럼 올려 주시면, 글에 필요한 정보는 제가 추가로 여쭤볼게요.</p>
-      </details>
-      <details>
-        <summary><span class="n en">08</span><span class="q">어르신 얼굴이 나온 사진은 어떻게 처리하나요?</span></summary>
-        <p>사용에 동의받은 사진만 쓰고, 어르신 얼굴은 모자이크해요. 글과 사진은 센터에서 확인한 뒤 게시합니다.</p>
-      </details>
-      <details>
-        <summary><span class="n en">09</span><span class="q">한 번만 맡길 수 있나요, 매달 관리도 가능한가요?</span></summary>
-        <p>블로그·플레이스 정비나 홈페이지 제작은 한 번만 맡기실 수 있어요. 꾸준히 소식을 올리고 싶다면 월 4건·8건·12건 중에서 고르시면 됩니다. 1건은 블로그 글 1편과 플레이스·당근 소식으로 구성돼요.</p>
-      </details>
-      <details>
-        <summary><span class="n en">10</span><span class="q">무료 AI 검색 진단에서는 무엇을 확인해 주시나요?</span></summary>
-        <p>ChatGPT·제미나이·네이버 AI에 보호자가 물어볼 만한 질문을 넣어, 우리 센터가 답변에 나오는지 화면으로 보여드려요. 블로그와 플레이스에서 빠진 정보를 살펴보고, 보호자처럼 휴대폰으로 전화가 실제로 연결되는지도 눌러 봐요. 그다음 무엇부터 보완하면 좋을지 알려드립니다.</p>
-      </details>
-      <details>
-        <summary><span class="n en">11</span><span class="q">블로그 글을 꾸준히 쓰는데 왜 문의가 없을까요?</span></summary>
-        <p>센터마다 원인이 달라서, 글을 더 쓰기 전에 어디서 끊기는지부터 봐야 해요. 검색으로 들어오는 사람이 적은지, 들어와도 이용 비용·송영 같은 정보가 없는지, 전화번호를 찾기 어렵거나 연결이 안 되는지 차례로 확인합니다. 무료 진단에서 이 순서대로 살펴봐 드려요.</p>
-      </details>
-      <details>
-        <summary><span class="n en">12</span><span class="q">리뷰와 글을 더 올리면 플레이스 순위가 올라가나요?</span></summary>
-        <p>글이나 리뷰 수만으로 순위가 오른다고 약속할 수는 없어요. 그보다 보호자가 실제로 검색할 동네 이름으로 센터가 보이는지, 보였을 때 필요한 정보와 연락 방법이 갖춰져 있는지를 먼저 확인하는 것이 좋아요.</p>
-      </details>
     </div>
+    <details class="faq-more">
+      <summary>질문 더 보기 <span>6개</span></summary>
+      <div class="faq-list">
+        <details>
+          <summary><span class="n en">07</span><span class="q">어떤 홍보를 도와주시나요?</span></summary>
+          <p>주야간보호센터의 네이버 블로그와 플레이스를 정리하고, 보호자가 휴대폰으로 보기 편한 센터 홈페이지를 만들어요. 월간 관리를 맡기시면 블로그 글과 플레이스·당근 소식도 작성해 드립니다.</p>
+        </details>
+        <details>
+          <summary><span class="n en">08</span><span class="q">수원·화성·용인 외 지역도 상담할 수 있나요?</span></summary>
+          <p>네. 수원·화성·용인은 직접 방문하고, 그 밖의 지역은 온라인으로 상담합니다. 방문요양기관과 요양원도 상담할 수 있어요.</p>
+        </details>
+        <details>
+          <summary><span class="n en">09</span><span class="q">블로그나 네이버 플레이스가 없어도 시작할 수 있나요?</span></summary>
+          <p>네. 상담할 때 지금 운영 중인 채널이 있는지 알려 주세요. 아무것도 없다면 센터 상황을 듣고 무엇부터 준비하면 좋을지 함께 정해요.</p>
+        </details>
+        <details>
+          <summary><span class="n en">10</span><span class="q">기존 블로그와 플레이스에서 어떤 부분을 정리해 주시나요?</span></summary>
+          <p>블로그는 메뉴·카테고리·소개글을, 플레이스는 소개 문구·사진 순서·기본 정보를 살펴봐요. 기존 글은 이어갈 부분과 정리할 부분을 함께 정하고, 블로그와 플레이스도 연결해 드립니다.</p>
+        </details>
+        <details>
+          <summary><span class="n en">11</span><span class="q">블로그 글을 꾸준히 쓰는데 왜 문의가 없을까요?</span></summary>
+          <p>센터마다 원인이 달라서, 글을 더 쓰기 전에 어디서 끊기는지부터 봐야 해요. 검색으로 들어오는 사람이 적은지, 들어와도 이용 비용·송영 같은 정보가 없는지, 전화번호를 찾기 어렵거나 연결이 안 되는지 차례로 확인합니다. 무료 진단에서 이 순서대로 살펴봐 드려요.</p>
+        </details>
+        <details>
+          <summary><span class="n en">12</span><span class="q">리뷰와 글을 더 올리면 플레이스 순위가 올라가나요?</span></summary>
+          <p>글이나 리뷰 수만으로 순위가 오른다고 약속할 수는 없어요. 그보다 보호자가 실제로 검색할 동네 이름으로 센터가 보이는지, 보였을 때 필요한 정보와 연락 방법이 갖춰져 있는지를 먼저 확인하는 것이 좋아요.</p>
+        </details>
+      </div>
+    </details>
     <p class="svc-note"><a href="https://pf.kakao.com/_rxeExeX/chat" target="_blank" rel="noopener">카톡으로 물어보기 ↗</a> · <a href="service/">상품 구성과 가격 보기 ↗</a></p>
   </div>
 </section>
