@@ -263,6 +263,8 @@
     .qr { justify-self: start; }
     .tools { margin: 18px auto 28px; padding: 0 20px; }
   }
+  /* 휴대폰 화면에서는 QR 숨김 (같은 휴대폰으로는 찍을 수 없으니) — PC·인쇄에는 그대로 */
+  @media screen and (max-width: 680px) { .qr { display: none; } }
 
   /* A4 한 장으로 인쇄 */
   @page { size: A4; margin: 9mm; }
